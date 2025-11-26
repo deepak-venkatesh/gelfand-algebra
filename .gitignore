@@ -7,6 +7,7 @@
 # Keep .pdf and .tex files
 !*.pdf
 !*.tex
+!*.md
 
 # Keep the images folder
 !images/
