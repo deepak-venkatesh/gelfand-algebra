@@ -2246,11 +2246,70 @@ $n$ & ... & $2^{n - 1}$\\
 \section{How many monomials do we get?}
 
 \begin{problem} %94
+  A polynomial with 4 monomials when multiplied by another polynomial with 4 terms will yield 16 monomial terms in total.
+\end{problem}
+
+\begin{problem} %95
+  Yes, they can yield lower than 16 monomials if the monomial are similar terms.
+\end{problem}
+
+\begin{problem} %96
+  Not at all possible. I like the recommendation by the author 'If you think so, please reconsider
+  the problem several years from now.'
   
 \end{problem}
 
+\begin{problem} %97
+  This is not a trivial problem for a middle school student. This proof requires a little bit of effort.
+  But the student needs to know proof by contradiction. Let us try it.
+
+  Assume there are two polynomials $P(x)$ and $Q(x)$. Both of these two polynomials have at least two non
+  zero terms. We can factor out $x$ from each of these polynomials and we assume that the product of these two
+  indeed give us just one term. Representing it as below.
+  \begin{gather*}
+    P(x) \times Q(x) = cx^k\\
+    x^a A(x) \times x^b B(x) = cx^k\\
+    A(x) \times B(x) = cx^{k - a - b}
+  \end{gather*}
+  The right hand side of the above equation has to yield a constant $c$ at $x = 0$. It also means the left
+  hand side of the equation $A(x) \times B(x)$ is also a constant which is contradictory to our initial statement
+  that these two are polynomials with a factored out $x$. Thus, there can be no possible way in which when two
+  polynomials with at least two terms are multiplied will yield an answer with only one term.
+\end{problem}
+
+\begin{problem} %98
+  Yes, it is possible. A good example is given in the book. But how can we prove it? If we can show that
+  even a single case exists then we can say that this assertion is true.
+
+  $(x^2 + 2xy + 2y^2)(x^2 - 2xy + 2y^2)$ is the example shown.
+  \begin{gather*}
+    (x^2 + 2y^2 + 2xy)(x^2 + 2y^2 - 2xy)\\
+    (x^2 + 2y^2)^2 - (2xy)^2\\
+    x^4 + 4y^4 + 4x^2y^2 - 4x^2y^2\\
+    x^4 + 4y^4
+  \end{gather*}
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%% 31
 \section{Coefficients and values}
+
+\begin{problem} %99
+
+  For $a = 1$ and $b = 1$ we simply get the sum of the coefficients for each row in the Pascal's triangle. That is\\
+  1, 2, 4, 8, 16, 32, 64 ... $2^n - 1$ for the $n^{th}$ row.
+  
+\end{problem}
+
+\begin{problem} %100
+  Adding the numbers with alternating signs will make the sum of coefficients $0$ as they will cancel each other out.
+  This is happening because the odd powers end up as a minus sign for one of the terms.
+
+\end{problem}
 
 %%%%%%%%%% 32
 \section{Factoring}
