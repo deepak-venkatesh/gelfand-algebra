@@ -76,7 +76,10 @@ any issue \href{https://github.com/deepak-venkatesh/gcpm/issues}{here}.
 \tableofcontents
 \newpage % start sections on a fresh page
 
-
+%%%%%
+%%%% Difficult Problems for Middle Schoolers:
+%%%% 31, 32, 42, 43, 45, 90, 101, 102, 103, 104, 105
+%%%%%
 
 %%%%%%%%%% 1
 \section{Introduction}
@@ -2311,8 +2314,114 @@ $n$ & ... & $2^{n - 1}$\\
 
 \end{problem}
 
+\begin{problem} %101
+  The hint is good to solve this problem.
+  
+  At $x = 1$ the polynomial will be of the form $(1 + 2.1)^{200}$. This gives us the answer $3^{200}$.
+
+  The polynomial can be written as below for $x = 1$
+  \begin{gather*}
+    P(x) = a_0 + a_1 x + a_2 x^2 + ...\\
+    P(x) = a_0 + a_1 + a_2 + ...
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %102
+  Similar to the last problem we put $x = 1$ and get $(1 - 2.1)^{200}$. The answer is 1.
+  
+\end{problem}
+
+\begin{problem} %103
+  Same logic, we substitute $x, y = 1$. We get $(1 + 1 - 1)^3$ which is $1$.
+  
+\end{problem}
+
+\begin{problem} %104
+  For terms not containing $y$ we can simply put $y = 0$ and work it out at $x = 1$.\\
+  This gives us $(1 + 1 - 0)^3$ which is 8.
+\end{problem}
+
+\begin{problem} %105
+  This one is slightly tricky and we should use concepts of sets. There are essentially 4 types of sets of monomials which is possible:
+  \begin{itemize}
+    \item Constant term that is 1
+    \item Only $x$ terms
+    \item Only $y$ terms
+    \item $xy$ terms
+  \end{itemize}
+
+  We know certain sums already
+\\
+
+\begin{tabular}{ccc}
+\toprule
+Terms & Sums of Coefficients \\
+\midrule
+1 & 1 \\
+$x$ & ? \\
+$y$ & ? \\
+$xy$ & ? \\
+all terms & 1 \\
+\bottomrule
+\end{tabular}
+\\
+
+We know that 1 and the $x$ terms only have a sum of 8, therefore only $x$ will be $8 - 1$ which is 7. So let us update the table.
+\\
+
+\begin{tabular}{ccc}
+\toprule
+Terms & Sums of Coefficients \\
+\midrule
+1 & 1 \\
+$x$ & 7 \\
+$y$ & ? \\
+$xy$ & ? \\
+all terms & 1 \\
+\bottomrule
+\end{tabular}
+\\
+
+Now we can figure out the sum of the coefficients of terms not containing $x$. We put $x = 0$.
+We get $(1 + 0 - 1)^3$ since $y = 1$ and that is 0. Next we remove the constant 1 from this 0 to get
+only the sum from $y$ terms, the answer is $-1$. Updating the table.
+\\
+
+\begin{tabular}{ccc}
+\toprule
+Terms & Sums of Coefficients \\
+\midrule
+1 & 1 \\
+$x$ & 7 \\
+$y$ & -1 \\
+$xy$ & ? \\
+all terms & 1 \\
+\bottomrule
+\end{tabular}
+\\
+
+Finally to get the coefficients for the $xy$ terms we can simply equate the individual terms to the total sum as below.
+\begin{gather*}
+  1 + 7 - 1 + coeff_{xy}  = 1\\
+  coeff_{xy} = - 6
+\end{gather*}
+\\
+
+So finally to get the sum of coefficients of terms containing $x$ we add the $x$ only sums and $xy$ sums.
+This gives $7 - 6$ and the answer is 1.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%% 32
 \section{Factoring}
+
+\begin{problem} %106
+  
+\end{problem}
 
 %%%%%%%%%% 33
 \section{Rational expressions}
