@@ -2566,10 +2566,43 @@ Thus the factorization is $(1 + a + a^2 + a^3 + a^4) (1 + a^5 + a^{10})$
     (a^2)^2 - (b^2)^2\\
     (a^2 + b^2) (a^2 - b^2)\\
     (a^2 + b^2)(a + b)(a - b)
-  \end{gather*}
-
-  
+  \end{gather*}  
 \end{problem}
+
+\begin{problem} %116
+  (a)
+  Again in this case if $a = b$ we get a factor. So we divide $(a^5 - b^5)$ with $(a - b)$. We get the factors as
+  $(a - b)(a^4 + a^3b + a^2b^2 + ab^3 + b^4)$.
+
+  A general formula can be derived for the factorization of $(a^n -b^n)$ seeing the last few questions.
+
+  $(a^n - b^n) = (a - b) (a^{(n - 1)} + a^{(n - 2)}b + a^{(n - 3)}b^2 + ... + ab^{(n - 2)} + b^{(n - 1)})$
+
+  (b) 
+  We can use the general formula derived earlier, but first
+
+  $(a^{10}  - b^{10}) = ((a^5)^2 - (b^5)^2) = (a^5 + b^5) (a^5 - b^5)$
+
+  We can also derive the factorization formula for $(a^n + b^n)$ as below.
+
+  $(a^n + b^n) = (a + b) (a^{(n - 1)} - a^{(n - 2)}b + a^{(n - 3)}b^2 - ... - ab^{(n - 2)} + b^{(n - 1)})$
+
+  Applying these two to the given problem we get
+
+  $(a^{10}  - b^{10}) = (a + b) (a - b) (a^4 - a^3b + a^2b^2 - ab^3 + b^4) (a^4 + a^3b + a^2b^2 + ab^3 + b^4)$
+
+  (c)
+
+  This can be stated as $(a^7 - 1^7)$, thus we could use the same logic as above
+
+  $(a^7 - 1) = (a - 1) (a^6 + a^5 + a^4 + a^3 + a^2 + a +1)$
+
+  We can now use the sum of the geometric series derived earlier to check our factorization too.
+
+  $(a^7 - 1) = (a - 1) (\frac{1 - a^{6 + 1}}{(1 - a)})$
+
+\end{problem}
+
 
 
 %%%%%%%%%% 33
