@@ -2835,7 +2835,182 @@ No problems
 \section{Converting a rational expression into the quotient of two polynomials}
 
 \begin{problem} %127
+  The objective is to get a fraction in which both numerator and denominator are polynomials.
+
+  (b) $\dfrac{ac}{b^2}$\\
+
+  (c) $\dfrac{x}{(1 + x)}$\\
+
+  (d)
+  \[
+  \dfrac{1}{1 + \dfrac{1}{1 + \dfrac{1}{1 + \dfrac{1}{x}}}}
+  \]
+
+  \[
+  \dfrac{1}{1 + \dfrac{1}{1 + \dfrac{x}{x + 1}}}
+  \]
+
+  \[
+  \dfrac{1}{1 + \dfrac{x + 1}{2x + 1}}
+  \]
+
+  \[
+  \dfrac{2x + 1}{3x + 2}
+  \]
+
+  (e)
+  \[
+  \dfrac{\dfrac{x}{y} + \dfrac{y}{z} + \dfrac{z}{x}}{\dfrac{y}{x} + \dfrac{z}{y} + \dfrac{x}{z}} + 1
+  \]
+
+  \[
+  \dfrac{x^2z + y^2x + z^2y}{y^2z + z^2x + x^2y} + 1
+  \]
+
+  \[
+  \dfrac{x^2z + x^2y + y^2x + y^2z + z^2x + z^2y}{y^2z + z^2x + x^2y}
+  \]
+
+  (g)
+
+  \[
+  \dfrac{1}{\left(\dfrac{\frac{1}{a} + \frac{1}{b}}{2}\right)}
+  \]
+
+  \[
+  \dfrac{2ab}{a + b}
+  \]
+\end{problem}
+
+\begin{problem} %128
+  \[
+  \dfrac{(x - a)(x - b)}{(c - a)(c - b)} + \dfrac{(x - a)(x - c)}{(b - a)(b - c)} + \dfrac{(x - b)(x - c)}{(a - b)(a - c)}
+  \]
+
+  In the book the authors expand right at the start. We should defer it to the end as far as possible. A lot of terms
+  cancel out in basic manipulations itself.
+
+  Numerator when cancels out with denominator:
+
+  \[
+  (x - a)(x - b)(a - b)\cancel{(b - c)}\cancel{(a - b)}\cancel{(a - c)}
+  \]
+  \[
+  + (x - a)(x - c)\cancel{(c - a)}\cancel{(c - b)}\cancel{(a - b)}(c - a)
+  \]
+  \[
+  + (x - b)(x - c)\cancel{(c - a)}(b - c)\cancel{(b - a)}\cancel{(b - c)}
+  \]
+
+  The denominator becomes:
+
+  \[
+  \cancel{(c - a)}(c - b)(b - a)\cancel{(b - c)}\cancel{(a - b)}(a - c)
+  \]
+
+  Working on the numerator now:
+  \[
+  (x - a)(x - b)(a - b) + (x - a)(x - c)(c - a) + (x - b)(x - c)(b - c)
+  \]
+
+  There is a certain symmetry we observe here. The $a$ and $b$ logically grouped with $x$, so with the other combinations.\\
+  We notice that $x^2$ on the first addition term yields $ax^2 - bx^2$, this will cancel out with the $x^2$ terms in the next two operands between the two addition signs. Thus all $x^2$s cancel out.
+  Similarly we also notice all the $x$ terms also cancel out through, we are left with a compact expression in the numerator now where we can easily factorize.\\
   
+  \[
+  a^2b - ab^2 + ac^2 - a^2c + b^2c - bc^2
+  \]
+
+  Assume $a^2$ to be the unknown for the quadratic factorization then
+  \[
+  a^2(b - c) + a(c^2 - b^2) + (cb^2 - bc^2)
+  \]
+
+  Take $(c - b)$ out.
+
+  \[
+  (c - b)[- a^2 + a (c + b) - bc]
+  \]
+
+  \[
+  (c - b) (b - a) (a - c) 
+  \]
+
+  Both the numerator and denominator are same. Thus, the answer is 1.
+\end{problem}
+
+\begin{problem} %129
+  Case $x = a$: The first two terms in the addition becomes $0$. The last term evaluates to $1$.\\
+
+  Case $x = b$: Same logic as above. The expression evaluates to $1$.\\
+
+  Case $x = c$: Same logic as above. The expression evaluates to $1$.\\
+  
+\end{problem}
+
+
+\begin{problem} %130
+  These problems should be solved in general terms as that does not allow any confusion to creep in.
+
+  Let the volume of each half of the pool be $X$, rate of flow in first half be $p$ and second half be $q$. Thus
+  the following equations hold true:
+
+  \begin{gather*}
+    X = ap\\
+    Y = bq
+  \end{gather*}
+
+  To fill the full tank we can frame the equation:
+  
+  \[
+    2X = t \times (p + q)
+  \]
+  where $t$ is the total time taken to fill the pool. Now substituting the initial equations into this we get.
+
+  \[
+    2X = t \times (\dfrac{X}{a} + \dfrac{X}{b})
+  \]
+  \[
+    t = \dfrac{2a}{a + b}
+  \]
+\end{problem}
+
+\begin{problem} %131
+  This is similar to the previous problem.
+
+  Assume the length from point $A$ to $B$ be $D$ and the speed of the motor boat be $v$ and river be $r$. Then we can formulate the following equations.
+
+  \begin{gather*}
+    D = (v + r)a\\
+    D = (v - r)b  
+  \end{gather*}
+
+  Students should note that while going with the stream the boat's speed is added to the river's speed. But while going against the 
+  current of the river the river's speed needs to be deducted from the boat's speed. A side question is what if the speed of the boat was lower than that
+  of the river and what if in another case it was equal?
+
+  Now when we need to find the time taken for the boat to travel $D$ when the speed of the river is $0$ then we have to find $t$ in the below equation.
+
+  \[
+  D = t \times v
+  \]
+
+  From the earlier two equations equating $r$ we get
+
+  \[
+  \dfrac{D}{a} - v = v - \dfrac{D}{b}
+  \]
+  \[
+  D = 2\left(\dfrac{1}{a} + \dfrac{1}{b}\right) V
+  \]
+  Thus we now have
+  \[
+  t = 2\left(\dfrac{1}{a} + \dfrac{1}{b}\right)
+  \]
+
+\end{problem}
+
+\begin{problem} %132
   
 \end{problem}
 
