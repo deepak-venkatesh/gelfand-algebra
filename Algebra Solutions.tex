@@ -3011,6 +3011,92 @@ No problems
 \end{problem}
 
 \begin{problem} %132
+  This is again similar to earlier problems. Assume half the trip is $D$ distance and it takes $t_1$ time while
+  the other half takes $t_2$ time. We can write
+  \begin{gather*}
+    2D = \left(\dfrac{D}{v_1} + \dfrac{D}{v_2}\right)v\\
+    v = \dfrac{2v_1v_2}{v_1 + v_2}
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %133
+  (a)
+  \begin{gather*}
+  (x + \dfrac{1}{x})^2 = x^2 + \dfrac{1}{x^2} + 2\\
+  7^2 = x^2 + \dfrac{1}{x^2} + 2\\
+  x^2 + \dfrac{1}{x^2} = 49 - 2 = 47
+  \end{gather*}
+
+  (b)
+  \begin{gather*}
+    (x + \dfrac{1}{x})^3 = x^3 + \dfrac{1}{x^3} + 3(x + \dfrac{1}{x})\\
+    x^3 + \dfrac{1}{x^3} = (x + \dfrac{1}{x})^3 - 3(x + \dfrac{1}{x})\\
+    x^3 + \dfrac{1}{x^3} = 7^3 - 3 \times 7\\
+    x^3 + \dfrac{1}{x^3} = 322
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %134
+  We can use the general expansion of the expression $(x + y)^n$ and look at the coefficients from the Pascal's triangle.
+  
+  \[
+    (x + y)^n = x^n + C_1x^{n - 1}y + C_2x^{n - 2}y^2 + ... + C_{n - 1}xy^{n - 1} + y^n
+  \]
+
+  One important point to note is that as per Pascal's triangle if $n$ is odd then all the coefficients exist in pairs, for
+  instance $C_1$ will be same as $C_{n - 1}$. But if $n$ is even then the middle term's coefficient will not have a pair. But this
+  does not matter since that coefficient is an integer itself. Going back to the above equation and substituting $\dfrac{1}{x}$ instead of $y$.
+
+  \[
+    (x + \dfrac{1}{x})^n = x^n + C_1x^{n - 1}\dfrac{1}{x} + C_2x^{n - 2}\dfrac{1}{x^2} + ... + C_{n - 1}x\dfrac{1}{x^{n - 1}} + \dfrac{1}{x^n}
+  \]
+
+  rearrange the terms
+
+  \[
+    (x + \dfrac{1}{x})^n = x^n + \dfrac{1}{x^n} + C_1x^{n - 1}\dfrac{1}{x} + C_{n - 1}x\dfrac{1}{x^{n - 1}} + C_2x^{n - 2}\dfrac{1}{x^2} + C_{n - 2}x^2\dfrac{1}{x^{n - 2}} ... 
+  \]
+
+  \[
+    (x + \dfrac{1}{x})^n = x^n + \dfrac{1}{x^n} + C_1x^{n - 2} + C_{n - 1}\dfrac{1}{x^{n - 2}} + C_2x^{n - 4} + C_{n - 2}\dfrac{1}{x^{n - 4}} ... 
+  \]
+
+  We also know that the corresponding coefficients (from the earlier statement) exists in parirs/middle one for even $n$ is alone.
+  Thus $C_1 = C_{n - 1}$ and so on. We reduce the equation to the following.\\
+  \[
+    (x + \dfrac{1}{x})^n = x^n + \dfrac{1}{x^n} + C_1\left(x^{n - 2} + \dfrac{1}{x^{n - 2}}\right) + C_2\left(x^{n - 4} + \dfrac{1}{x^{n - 4}}\right) ...
+  \]
+
+  The smallest term in this equation will be $x^2 + \dfrac{1}{x^2}$. This we can show is an integer already.
+  \[
+    (x + \dfrac{1}{x})^2 = x^2 + \dfrac{1}{x^2} + 2
+  \]
+  \[
+    x^2 + \dfrac{1}{x^2} = (x + \dfrac{1}{x})^2 - 2
+  \]
+  The right hand side is an integer minus $2$. Now we can look at $x^4 + \dfrac{1}{x^4}$.
+  \[
+    (x^2 + \dfrac{1}{x^2})^2 = x^4 + \dfrac{1}{x^4} + 2
+  \]
+  \[
+    x^4 + \dfrac{1}{x^4} = (x^2 + \dfrac{1}{x^2})^2 - 2
+  \]
+  The right hand side here too is an integer. Thus, we can go down the rabbit hole and say as we go up in the higher powers of 
+  even numbers the term $x^{2k} + \dfrac{1}{x^{2k}}$ will always be an integer for a given integer $k > 0$.
+
+  Thus the original expression collapses to the following:
+  \[
+    (x + \dfrac{1}{x})^n = x^n + \dfrac{1}{x^n} + C_1\left(x^{n - 2} + \dfrac{1}{x^{n - 2}}\right) + C_2\left(x^{n - 4} + \dfrac{1}{x^{n - 4}}\right) ...
+  \]
+  \[
+    integer_1 = x^n + \dfrac{1}{x^n} + integer_2
+  \]
+  Hence we have proved that $x^n + \dfrac{1}{x^n}$ is always an integer.
+
+  Please note the proper way of proving this is via mathematical induction but the authors have not introduced this technique yet.
+\end{problem}
+
+\begin{problem} %135
   
 \end{problem}
 
