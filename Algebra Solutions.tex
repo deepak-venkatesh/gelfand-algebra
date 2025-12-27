@@ -3147,11 +3147,97 @@ No problems
 \section{Division of polynomials in one variable; the remainder}
 
 \begin{problem} %140
-  
+  The quotient will have a degree of 4 which is got by $\dfrac{x^7}{x^3}$ whereas the remainder will be a proper fraction
+  such that the numerator will be of a degree which is at the maximum equal to 4 or lower. So the range of the degree of the
+  remainder polynomial will be from $0$ to $1$.
 \end{problem}
+
+\begin{problem} %141
+  The solution is given in the book. $P$ is divided by $S$ which gives the following.
+  \begin{gather*}
+    P = Q_1S + R_1\\
+    P = Q_2S + R_2
+  \end{gather*}
+
+  $R_1$ and $R_2$ will have a degree smaller than $S$. Then 
+  \[
+  Q_1S + R_1 = Q_2S + R_2
+  \]
+  \[
+  R_1 - R_2 = (Q_2 - Q_1)S
+  \]
+
+  $R_1 - R_2$ has a smaller degree than $S$ since individually too they have a smaller degree. They cannot be a multiple of $S$ either. Therefore,
+  $Q_1 - Q_2 = 0$, that is $Q_1 = Q_2$ and thus $R_1 = R_2$.
+\end{problem}
+
+\begin{problem} %142
+  In this case the fraction cannot be further divided as such. The quotient is 0 and the remainder is the dividend itself.
+\end{problem}
+
+\begin{problem} %143
+  (a)
+  \[
+  \polylongdiv{x^3 - 1}{x - 1}
+  \]
+
+  (b)
+  \[
+  \polylongdiv{x^4 - 1}{x - 1}
+  \]
+
+  (c)
+  \[
+  \polylongdiv{x^{10} - 1}{x - 1}
+  \]
+
+  (d)
+  \[
+  \polylongdiv{x^3 + 1}{x + 1}
+  \]
+
+  (e)
+  \[
+  \polylongdiv{x^4 + 1}{x + 1}
+  \]
+\end{problem}
+
+\begin{problem} %144
+  This one is just a specific case of the formula, a geometric progression where $b = 1$.
+
+  \[
+   (a^n - b^n) = (a - b) (a^{(n - 1)} + a^{(n - 2)}b + a^{(n - 3)}b^2 + ... + ab^{(n - 2)} + b^{(n - 1)})
+  \]
+  \[
+   (a^n - 1) = (a - 1) (a^{(n - 1)} + a^{(n - 2)} + a^{(n - 3)} + ... + a + 1)
+  \]
+
+  Let us rearrange the equation.
+
+  \[
+    (1 + a + a^2 + a^3 + a^4 + ... + a^{n - 2} + a^{n - 1}) = \dfrac{(a^n - 1)}{(a - 1)}
+  \]
+
+  Let us substitute $a = 2$ in the above equation.
+
+  \[
+    (1 + 2 + 2^2 + 2^3 + 2^4 + ... + 2^{n - 2} + 2^{n - 1}) = \dfrac{(2^n - 1)}{(2 - 1)} = (2^n - 1)
+  \]
+
+  We can see the left hand side is the summation of all the powers of 2 up to the number $(n - 1)$ and the right hand side is one less
+  than $2^n$.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 37
 \section{The remainder when dividing by $x - a$}
+
+\begin{problem} %145
+  
+\end{problem}
 
 %%%%%%%%%% 38
 \section{Values of polynomials, and interpolation}
