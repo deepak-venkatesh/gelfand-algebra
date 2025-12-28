@@ -3239,7 +3239,63 @@ No problems
   (a) For all powers of $x$ we will get $x^n = 1$ when we substitute $x = 1$.
 
   (b) For only odd powers of $x$ we will get $x^n = -1$ when we substitute $x = -1$.
+\end{problem}
+
+\begin{problem} %146
+  (a)
+  We can easily observe that at $x = 1$ and $x = -2$ the polynomial will yield $0$. So we know $(x - 1)$ and $x - 2$ will
+  be factors. Then dividing the polynomial with these two factors.
+  \[
+  \polylongdiv{x^4 + 0x^3 + 0x^2 + 5x - 6}{x^2 + x - 2}
+  \]
+
+  Thus the factorization is
+  \[
+    x^4 + 5x - 6 = (x - 1)(x + 2)(x^2 - x + 3)
+  \]
+  If we try to factorize $(x^2 - x + 3)$ we will end up with complex roots to this quadratic so we will skip that.
+
+
+  (b)
+  Here we see all terms are positive so we should look for negative numbers which would turn the polynomial into $0$.
+  The first factor we can see is $(x + 1)$. Now we will divide the polynomial by this factor.
+  \[
+  \polylongdiv{x^4 + 3x^2 + 5x + 1}{x + 1}
+  \]
+  Now we have to figure out whether the polynomial $x^3 - x^2 + 4x + 1$ can be further factorized or not. By visual inspection
+  we can deduce that any integer from $-5$ to $+5$ will not turn the polynomial $0$.
   
+  So the factorization is
+  \[
+  x^4 + 3x^2 + 5x + 1 = (x + 1)(x^3 - x^2 + 4x + 1)
+  \]
+
+  (c)
+  The visual inspection immediately gives is the following two factors $(x + 1)$ and $(x - 2)$. Dividing now.
+
+  \[
+  \polylongdiv{x^3 - 3x - 2}{x^2 - x -2}
+  \]
+  
+  Thus the factorization is
+  \[
+  x^3 - 3x - 2 = (x + 1)^2 (x - 2)
+  \]
+\end{problem}
+
+\begin{problem} %147
+  The proof is given in the book with the common error made when highlighted. We have used this logic in the earlier problem
+  already when we divided the polynomial by the product of all its known factors. The authors state that $P = (x - 1)Q$. Then
+  they substitute 2 and find that 2 is a root of $Q$. Finally arriving at the expression $P = (x - 1)(x - 2)R$.
+\end{problem}
+
+\begin{problem} %148
+  This is simply the highest degree of the polynomial. The authors show this with an example. But we can simply state the following.
+
+  \[
+  P(x) = (x - n_1)(x - n_2)(x - n_3)(x - n_4) ... 1
+  \]
+  Here the $R$ equivalent polynomial is of 0 degree and the constant is 1.
 \end{problem}
 
 %%%%%%%%%% 38
