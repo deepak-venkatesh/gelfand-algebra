@@ -3298,6 +3298,28 @@ No problems
   Here the $R$ equivalent polynomial is of 0 degree and the constant is 1.
 \end{problem}
 
+\begin{problem} %149
+  We simply check if the polynomial gives a remainder of 0 when divided by $(x - 1)$ and $(x + 1)$. The other easier way
+  is to substitute $1$ and $-1$ in the polynomial and see if they are roots.
+\end{problem}
+
+\begin{problem} %150
+  This is only possible when $n$ is even. We can do a short proof of the same but it is fairly visible when we look at the problem.
+
+  If $n$ was even we see the proof below and it is correct.
+  \[
+  x^n - 1 = x^{2k} - 1 = (x^k - 1) (x^k + 1)
+  \]
+
+  If $n$ was odd then.
+
+  \[
+  x^n - 1 = x^{2m + 1} - 1
+  \]
+  For $(x - 1)$ the right hand side will yield $0$ but $(x + 1)$ will yield $-2$. Hence for $n$ as an odd number this will not
+  hold true.
+\end{problem}
+
 %%%%%%%%%% 38
 \section{Values of polynomials, and interpolation}
 
