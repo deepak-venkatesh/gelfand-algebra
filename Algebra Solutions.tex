@@ -3320,6 +3320,34 @@ No problems
   hold true.
 \end{problem}
 
+\begin{problem} %151
+  We can substitute $x = 1$ and $x = -1$ in the equation $P(x) = (x^2 - 1) + (ax + b)$. This will give us two linear equations in
+  $x$. We can solve them simultaneously and arrive at the values of $a$ and $b$.
+\end{problem}
+
+\begin{problem} %152
+  We can write the given division as
+  \[
+  P = Q (x^2 - 1) + (5x - 7) = Q (x - 1)(x + 1) + (5x - 7)
+  \]
+
+  One way to look at this is that $Q (x + 1)$ is a polynomial in $x$ and serves as the quotient when divided by $(x - 1)$.
+  In this case the remainder is $(5x - 7)$.
+
+  The other way is to divide by $(x + 1)$. Thus we need to do the below division to arrive at the remainder.
+
+  \[
+  \polylongdiv{5x - 7}{x - 1}
+  \]
+
+  We cam write that as
+  \[
+  P = \left(Q (x + 1)\right) (x - 1) + 5(x - 1) - 2 = \left(Q (x + 1)\right) (x - 1) + 5x - 7
+  \]
+  Here too we get the remainder as $(5x - 7)$.
+
+\end{problem}
+
 %%%%%%%%%% 38
 \section{Values of polynomials, and interpolation}
 
