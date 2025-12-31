@@ -66,8 +66,7 @@
 covering 72 topics related to school level algebra. The book presents 342 problems some with
 solutions, and others without. This booklet aims to provide correct solutions to all
 the 342 problems listed in \textit{Algebra}. Each solution is carefully checked, either by hand (particularly for proofs)
-or programmatically using Scheme (a dialect of Lisp) in a REPL environment. DrRacket serves as
-the IDE, and the implementation language used is Racket, a modern variant of Scheme. LLMs have helped
+or programmatically using Scheme (a dialect of Lisp) in a REPL environment. LLMs have helped
 me in typing this out in \LaTeX. All errors are my own, please report
 any issue \href{https://github.com/deepak-venkatesh/gcpm/issues}{here}.
 \end{abstract}
@@ -3424,8 +3423,62 @@ No problems
 \section{Values of polynomials, and interpolation}
 
 \begin{problem} %155
+  The table is below\\
+
+\begin{tabular}{ccc}
+\toprule
+$P(x)$ & $x^3 - 2$  & value \\
+\midrule
+0 & $0^3 - 2$ & -2 \\
+1 & $1^3 - 2$ & -1 \\
+1 & $2^3 - 2$ & 6 \\
+3 & $3^3 - 2$ & 25 \\
+4 & $4^3 - 2$ & 62 \\
+5 & $5^3 - 2$ & 123 \\
+6 & $6^3 - 2$ & 214 \\
+\bottomrule
+\end{tabular}
+\\
+\end{problem}
+
+\begin{problem} %156
+  This is just a substitution problem. We can either plug in numbers and show that successive differences will result in
+  a constant difference in this case 2. Or we can consider a generic number $k$ and show a generic answer. Let us work with $k$.
+
+\begin{tabular}{c c c c}
+\toprule
+$P(x)$ & $x^2 - x - 4$  & Expansion & Value \\
+\midrule
+$k - 1$ & $(k - 1)^2 - (k - 1) - 4$ & $k^2 + 1 - 2k - k + 1 - 4$ & $k^2 - 3k -2$ \\
+$k$ & $k^2 - k - 4$ & $k^2 - k - 4$ & $k^2 - k - 4$ \\
+$k + 1$ & $(k + 1)^2 - (k + 1) - 4$ & $k^2 + 1 + 2k - k - 1 - 4$ & $k^2 + k - 4$ \\
+$k + 2$ & $(k + 2)^2 - (k + 2) - 4$ & $k^2 + 4 + 4k - k - 2 - 4$ & $k^2 + 3k - 2$ \\
+\bottomrule
+\end{tabular}
+\\
+
+Now we just take first successive differences.\\
+
+\begin{tabular}{c c}
+\toprule
+First Difference & Value \\
+\midrule
+$k^2 - k - 4 - k^2 + 3k + 2$ & $2k - 2$\\
+$k^2 + k - 4 - k^2 + k + 4$ & $2k$\\
+$k^2 + 3k - 2 - k^2 - k + 4$ & $2k + 2$\\
+\bottomrule
+\end{tabular}
+\\
+
+The value columns already shows that the difference in these terms is $2$. So if we take another set of differences in these values
+we will get the series as a constant 2.
+\end{problem}
+
+\begin{problem} %157
   
 \end{problem}
+
+
 
 %%%%%%%%%% 39
 \section{Arithmetic progressions}
@@ -3439,7 +3492,7 @@ No problems
 %%%%%%%%%% 42
 \section{The sum of a geometric progression}
 
-%%%%%%%%%% 43
+%%%%%%%%%% 43 
 \section{Different problems about progressions}
 
 %%%%%%%%%% 44
