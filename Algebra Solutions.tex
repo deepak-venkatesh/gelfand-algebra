@@ -1372,7 +1372,7 @@ That is a whopping 37.8432 Trillion Kilometers
 %%%%%%%%%% 17
 \section{Big numbers around us}
 
-\begin{problem}
+\begin{problem} %49
 (a) $2^{10}$ is 1024 so $2^{20} = 2^{10} \times 2^{10} = 1024 \times 1024$\\
 This will 1 followed by 6 other digits. So total digits will be 7.
 
@@ -3475,9 +3475,195 @@ we will get the series as a constant 2.
 \end{problem}
 
 \begin{problem} %157
-  
+  This is a generalization of the above solution. Assume the polynomial is $ax^2 + bx +c$. Then we can build a similar table.
+
+\begin{tabular}{c c c}
+\toprule
+$P(x)$ & $ax^2  bx + c$  & Value \\
+\midrule
+$k - 1$ & $a(k - 1)^2 + b(k - 1) + c$ & $ak^2 - 2ak + bk + a - b + c$ \\
+$k$ & $ak^2 + bk + c$ & $ak^2 + bk + c$ \\
+$k + 1$ & $a(k + 1)^2 + b(k + 1) + c$ & $ak^2 + 2ak + bk + a + b + c$ \\
+$k + 2$ & $a(k + 2)^2 + b(k + 2) + c$ & $ak^2 + 4ak + bk + 4a + 2b + c$ \\
+\bottomrule
+\end{tabular}
+\\
+
+Now we just take first successive differences.\\
+
+\begin{tabular}{c c}
+\toprule
+First Difference & Value \\
+\midrule
+$ak^2 + bk + c - ak^2 + 2ak - bk - a + b - c$ & $2ak - a + b$\\
+$ak^2 + 2ak + bk + a + b + c - ak^2 - bk - c$ & $2ak + a + b$\\
+$ak^2 + 4ak + bk + 4a + 2b + c - ak^2 - 2ak - bk - a - b - c$ & $2ak + 3a + b$\\
+\bottomrule
+\end{tabular}
+\\
+
+The value column can again be observed for successive differences which is
+\[
+2ak + a + b - (2ak - a + b)
+\]
+and
+\[
+2ak + 3a + b - (2ak + a + b)
+\]
+
+The above two differences yield a constant difference of $2a$. Thus we have proved all differences will be $2a$.
 \end{problem}
 
+\begin{problem} %158
+  In case of a polynomial with degree 3 we can deduce that the "third difference" will be a constant difference.
+  We can quickly verify this with the a test third degree polynomial $(x + 1)^3$.
+
+  First difference gives us the following values.
+  \[
+  3x^2 + 3x + 1
+  \]
+  \[
+  3x^2 + 9x + 7
+  \]
+  \[
+  3x^2 + 15x + 19
+  \]
+
+  Then the second difference gives us
+  \[
+  6x + 6
+  \]
+  \[
+  6x + 9
+  \]
+
+  Finally the "third difference" is a constant of 3.
+
+  Actually we can prove the same with a generic third degree polynomial such as $ax^3 + bx^2 + cx + d$ but the above
+  deduction is sufficient.
+\end{problem}
+
+\begin{problem} %159
+  This is a classic number theory problem and I will show it with Lisp code too. Pleasantly surprised to see this problem in this book.
+  Would love it when my daughter and son come across this for the first time in their lives. I hope they admire the
+  mathematics of Euler as much as I do. 
+
+  \begin{quote}
+    \itshape
+    ``Euler, the master of us all.''
+    
+    \hfill --- Carl Friedrich Gauss
+  \end{quote}
+
+  We can test whether a number is prime if we can check whether the greatest divisor for that number is the number itself and no other divisor greater
+  than qual to 2 exists. This algorithm has probably been used for centuries.
+
+  So we will check for every value of $n$ starting from 1 and go on. Manually it is very easy to check up to $n = 10$ since that results in
+  only 151 and we notice that all numbers ${43, 47, 53, 61, 71, 83, 97, 113, 131, 151}$ are prime. But a general solution is pretty difficult.
+  In fact this was Problem number \#6 in the International Math Olympiad in 1987! Stating the problem below:\\
+
+  Let $n$ be an integer greater than or equal to $2$. Prove that if $k^2 + k + n$ is prime for all integers $k$ such
+  that $0 \le k \le \sqrt{n / 3}$, then $k^2 + k + n$ is prime for all integers $k$ such that $0 \le k \le n - 2$.
+
+  We know the answer but now let us make our computer wizard do the job of computation. Here is the Scheme/Lisp code and the output generated.
+
+\begin{lstlisting}
+
+#lang sicp
+
+;; check whether a value of a given polynomial is prime or not
+
+
+;; polynomial given x^2 + x + 41
+(define (poly x)
+  (+ (* x x) x 41))
+
+;; print value of polynomial and whether it's prime or not
+(define (print-polyval-prime from to)
+  (define (iter n)
+    (if (> n to)
+        (quote done)
+        (let ((value (poly n)))
+          (display "n = ") (display n)
+          (display "    f(n) = ") (display value)
+          (display "    prime? -> ") (display (if (prime? value) "yes" "no"))
+          (newline)
+          (iter (+ n 1)))))
+  (iter from))
+
+;; Prime testing procedure
+(define (prime? n)
+  (= n (smallest-divisor n)))
+
+(define (smallest-divisor n)
+  (find-divisor n 2))
+
+(define (find-divisor n test-divisor)
+  (cond ((> (square test-divisor) n) n)
+        ((divides? test-divisor n) test-divisor)
+        (else (find-divisor n (+ test-divisor 1)))))
+
+(define (square x)
+  (* x x))
+
+(define (divides? x y)
+  (= (remainder y x) 0))
+
+\end{lstlisting}
+
+Below is the output printed in the REPL in Dr.Racket. We can see that at $n = 40$ we get an output value of 1681 which is not a prime.
+1681 is the square of 41. 
+
+\begin{lstlisting}
+> (print-polyval-prime 1 41)
+n = 1    f(n) = 43    prime? -> yes
+n = 2    f(n) = 47    prime? -> yes
+n = 3    f(n) = 53    prime? -> yes
+n = 4    f(n) = 61    prime? -> yes
+n = 5    f(n) = 71    prime? -> yes
+n = 6    f(n) = 83    prime? -> yes
+n = 7    f(n) = 97    prime? -> yes
+n = 8    f(n) = 113    prime? -> yes
+n = 9    f(n) = 131    prime? -> yes
+n = 10    f(n) = 151    prime? -> yes
+n = 11    f(n) = 173    prime? -> yes
+n = 12    f(n) = 197    prime? -> yes
+n = 13    f(n) = 223    prime? -> yes
+n = 14    f(n) = 251    prime? -> yes
+n = 15    f(n) = 281    prime? -> yes
+n = 16    f(n) = 313    prime? -> yes
+n = 17    f(n) = 347    prime? -> yes
+n = 18    f(n) = 383    prime? -> yes
+n = 19    f(n) = 421    prime? -> yes
+n = 20    f(n) = 461    prime? -> yes
+n = 21    f(n) = 503    prime? -> yes
+n = 22    f(n) = 547    prime? -> yes
+n = 23    f(n) = 593    prime? -> yes
+n = 24    f(n) = 641    prime? -> yes
+n = 25    f(n) = 691    prime? -> yes
+n = 26    f(n) = 743    prime? -> yes
+n = 27    f(n) = 797    prime? -> yes
+n = 28    f(n) = 853    prime? -> yes
+n = 29    f(n) = 911    prime? -> yes
+n = 30    f(n) = 971    prime? -> yes
+n = 31    f(n) = 1033    prime? -> yes
+n = 32    f(n) = 1097    prime? -> yes
+n = 33    f(n) = 1163    prime? -> yes
+n = 34    f(n) = 1231    prime? -> yes
+n = 35    f(n) = 1301    prime? -> yes
+n = 36    f(n) = 1373    prime? -> yes
+n = 37    f(n) = 1447    prime? -> yes
+n = 38    f(n) = 1523    prime? -> yes
+n = 39    f(n) = 1601    prime? -> yes
+n = 40    f(n) = 1681    prime? -> no
+n = 41    f(n) = 1763    prime? -> no
+done
+\end{lstlisting}
+\end{problem}
+
+\begin{problem} %160
+  
+\end{problem}
 
 
 %%%%%%%%%% 39
