@@ -66,8 +66,8 @@
 covering 72 topics related to school level algebra. The book presents 342 problems some with
 solutions, and others without. This booklet aims to provide correct solutions to all
 the 342 problems listed in \textit{Algebra}. Each solution is carefully checked, either by hand (particularly for proofs)
-or programmatically using Scheme (a dialect of Lisp) in a REPL environment. LLMs have helped
-me in typing this out in \LaTeX. All errors are my own, please report
+or programmatically using Scheme (a dialect of Lisp). LLMs have helped
+me in drawing figures in \LaTeX. All errors are my own, please report
 any issue \href{https://github.com/deepak-venkatesh/gcpm/issues}{here}.
 \end{abstract}
 \vspace{27em}
@@ -78,7 +78,7 @@ any issue \href{https://github.com/deepak-venkatesh/gcpm/issues}{here}.
 
 %%%%%
 %%%% Difficult Problems for Middle Schoolers:
-%%%% 31, 32, 42, 43, 45, 90, 97, 101, 102, 103, 104, 105, 107 (c),
+%%%% 31, 32, 42, 43, 45, 90, 97, 101, 102, 103, 104, 105, 107 (c), 111, 116, 122, 159, 166
 %%%%%
 
 %%%%%%%%%% 1
@@ -3740,7 +3740,7 @@ done
   This is solved in the book and uses proof by contradiction approach to solve. Summarizing the solution. If $P(x)$ and $Q(x)$ are
   two polynomials of degree not more than 2 and for three different numbers the two polynomials are same then both the polynomials are indeed equivalent.
 
-  Let a polynomial be defined aS
+  Let a polynomial be defined as
 
   \[
   R(x) = P(x) - Q(x)
@@ -3892,11 +3892,173 @@ done
 \end{problem}
 
 \begin{problem} %169
-  
+  This is similar to earlier problems in this chapter. We will use the same reasoning as in problem 164 and 166 but modified for this problem.
+
+  Given 
+  \begin{gather*}
+    P(x_1) = y_1\\
+    P(x_2) = y_2\\
+    ...\\
+    P(x_{10}) = y_{10}
+  \end{gather*}
+
+  Let another polynomial $Q(x)$ also have the same outputs with the given input arguments.
+  \begin{gather*}
+    Q(x_1) = y_1\\
+    Q(x_2) = y_2\\
+    ...\\
+    Q(x_{10}) = y_{10}
+  \end{gather*}
+
+  Now we have another polynomial which is the difference of the above two, $R(x) = P(x) - Q(x)$. We can derive the following relationship
+  from this for $i \in [1, 10]$
+  \[
+  R(x_i) = P(x_i) - Q(x_i)
+  \]
+
+  But we know that $P(x_i) = y_i$ and also $Q(x_i) = y_i$. Substituting this in the equation above.
+
+  \[
+  R(x_i) = P(x_i) - Q(x_i) = y_i - y_i = 0
+  \]
+ 
+  If $R(x_i) = 0$ then $P(x_i) = Q(x_i)$. Thus $P(x)$ is unique.
 \end{problem}
+
+\begin{problem} %170
+  This is a nice problem.
+
+  There are a few ways to do this. The most obvious is solve for the unknowns but the authors say do not do that. So let us keep
+  that aside.
+
+  The other method is just visual inspection. We see the coefficients of $a$ to be square numbers $10^2$, $6^2$, and $2^2$. Also the bases 
+  of these are coefficients of $b$. So we have a generic structure like $ax^2 + bx + c = k$. We have boiled down the question to what we have been 
+  proving multiple times in this chapter. We have a polynomial of degree 2 $P(x)$ such that only one unique polynomial exists since we are given that 
+  $P(10) = 18.37$, $P(6) = 0.05$, and $P(2) = -3$. Thus $a$, $b$, and $c$ will exist uniquely.
+
+  But this is the solution which did not come to my mind immediately. A very traditional way to show that there exists unique solutions to 
+  these equations is to use matrices. If we show that the determinant of the matrix of coefficients of these equations is non-zero then there is a solution to this. 
+
+  \[
+  A = 
+  \begin{pmatrix}
+    100 & 10 & 1\\
+    36 & 6 & 1\\
+    4 & 2 & 1
+  \end{pmatrix}
+  \]
+
+  This coefficient matrix is not linearly dependent so determinant is non-zero. Anyways we can still check it. Doing some row operations.
+  $R_1 - R_2$ and $R_2 - R_3$, we get 
+  \[
+  A = 
+  \begin{pmatrix}
+    64 & 4 & 0\\
+    32 & 4 & 0\\
+    4 & 2 & 1
+  \end{pmatrix}
+  \]
+
+  Another row operation $R_1 - R_2$, this gives 
+  \[
+  A = 
+  \begin{pmatrix}
+    32 & 0 & 0\\
+    32 & 4 & 0\\
+    4 & 2 & 1
+  \end{pmatrix}
+  \]
+
+  We get $\det(A) \neq 0$. Thus unique solution exists.
+
+  There is a third way to look at this problem. This is when we think of a 3-D co-ordinate system with axis $a$, $b$, and $c$. Each of 
+  the 3 given equations should represent a unique plane in this 3 dimensional co-ordinate system for there to be a unique solution. These 3 planes 
+  would then intersect at a single point. Assume (proof by contradiction) that if at least any of the two planes are either parallel to each other 
+  or are equal (basically the same). We immediately observe that given the coefficients none of these two conditions are possible because either the 
+  coefficients would have been same or reducible (after dividing by a suitable number) to a the same numbers. Thus these planes will always 
+  intersect at one point.
+
+  Let us try to see this using Lisp programming too.
+
+  \begin{lstlisting}
+#lang racket
+
+(require plot)
+
+(plot-new-window? #t)
+
+;; 3 planes assume c to be 0 or we can use an offset constant either ways
+
+(define (plane1 x y)
+  (- 18.37 (* 100 x) (* 10 y)))
+
+(define (plane2 x y)
+  (- 0.05 (* 36 x) (* 6 y)))
+
+(define (plane3 x y)
+  (- -3 (* 4 x) (* 2 y)))
+
+;; plot the planes
+
+(plot3d
+ (list
+  (surface3d plane1 -1 1 -1 1
+             #:color "red"
+             #:alpha 0.6)
+  (surface3d plane2 -1 1 -1 1
+             #:color "blue"
+             #:alpha 0.6)
+  (surface3d plane3 -1 1 -1 1
+             #:color "green"
+             #:alpha 0.6))
+ #:x-label "a"
+ #:y-label "b"
+ #:z-label "c")
+  \end{lstlisting}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{images/problem170.png}
+\label{fig:point intersection of 3 unique planes}
+\end{figure} 
+
+The intersection point is not very clear but the actual co-ordinate for the planes used in the Lisp code returns
+$(0.4771875, -3.05625, -3.265)$.
+\end{problem}
+
+\begin{problem} %171
+  The answer is given but the solution isn't.
+
+  We can say that this polynomial has 10 roots and they are numbers from 1 to 10, there could be more roots but
+  we know these 10 for sure. Since the highest coefficient of $P(x)$ is 1 
+  it means that no other coefficient will be greater than 1. The smallest degree polynomial which we can form is
+  \[
+  P(x) = (x - 1)(x - 2)(x - 3)(x - 4)(x - 5)(x - 6)(x - 7)(x - 8)(x - 9)(x - 10)
+  \]
+
+  If we substitute $x = 11$ then we basically get $10!$ which computes to 3628800.
+\[
+P(11) = (11 - 1)(11 - 2)(11 - 3)(11 - 4)(11 - 5)(11 - 6)(11 - 7)(11 - 8)(11 - 9)(11 - 10)
+\]
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 39
 \section{Arithmetic progressions}
+\begin{problem} %172
+  First $+2$, second $-1$.
+\end{problem}
+
+\begin{problem} %173
+  The difference is $-7$. Thus $-2 - 7 = -9$. So $-9$.
+\end{problem}
+
+\begin{problem} %174
+  
+\end{problem}
 
 %%%%%%%%%% 40
 \section{The sum of arithmetic progression}
