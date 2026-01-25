@@ -1,5 +1,6 @@
 \documentclass[10pt]{article}
 \usepackage{amsmath}
+\usepackage{comment}
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{longdivision}
@@ -4332,6 +4333,57 @@ Third term\\
 \end{problem}
 
 \begin{problem} %194
+  One bacteria grows in the following sequence every 1 minute.
+
+  \[
+  1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, ...
+  \]
+
+  which is the powers of 2
+
+  \[
+  2^0, 2^1, 2^2, 2^3, 2^4, ... 2^{30}
+  \]
+
+  At the 30th minute there will be $2^{30}$ bacteria. Now if there were 2 bacteria at the start then the 
+  sequence would look like.
+
+  \[
+  2 . 2^0, 2 . 2^1, 2 . 2^2, 2 . 2^3, 2 . 2^4, ... 2 . 2^{30}
+  \]
+
+  \[
+  2^1, 2^2, 2^3, 2^4, 2^5, ... 2^{29}, 2^{30}, 2^{31}
+  \]
+
+  Here we note that $2^{30}$ is the 29th term denoting the 29th minute.
+
+
+  \begin{comment} 
+  \[
+  S = a + ar + ar^2 + ar^3 + ... + ar^{n - 1}
+  \]
+
+  Multiplying both sides by $r$.
+
+  \[
+  rS = ar + ar^2 + ar^3 + ... + ar^{n - 1} + ar^n
+  \]
+
+  Subtracting the two equations. 
+
+  \[
+  S - rS = a - ar^n
+  \]
+ 
+  \[
+  S = \dfrac{a(1 - r^n)}{(1 - r)}
+  \]
+  \\
+  \end{comment}
+\end{problem}
+
+\begin{problem} %195
   
 \end{problem}
 
