@@ -7,4 +7,4 @@ solutions, and others without.
 
 This booklet aims to provide correct solutions to all the 342 problems listed in _Algebra_
 Each solution is carefully checked, either by hand (particularly for proofs)
-or programmatically using Scheme (a dialect of Lisp). LLMs have helped me in typing this out in LaTeX. All errors are my own, please report any [issue](https://github.com/deepak-venkatesh/gelfand-algebra/issues)
+or programmatically using Scheme (a dialect of Lisp). LLMs have helped me in drawing diagrams in LaTeX. All errors are my own, please report any [issue](https://github.com/deepak-venkatesh/gelfand-algebra/issues)
