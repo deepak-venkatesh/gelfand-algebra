@@ -17,4 +17,4 @@ figures in LaTeX and for reviewing exposition.
 This work is not affiliated with, endorsed by, or approved by the original authors
 or publisher. Any errors, omissions, or inconsistencies are entirely my own.
 Issues and corrections may be reported at
-https://github.com/deepak-venkatesh/gelfand-algebra/issues
+https://github.com/deepak-venkatesh/gelfand-shen-algebra/issues
