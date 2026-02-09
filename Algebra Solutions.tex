@@ -158,6 +158,15 @@ Project repository:\\
 \end{comment}
 
 \newpage
+\thispagestyle{empty}
+
+\vspace*{\fill}
+\begin{center}
+\textit{For\\[0.5em]
+My Daughter and Son}
+\end{center}
+\vspace*{\fill}
+\newpage
 \tableofcontents
 \newpage % start sections on a fresh page
 
@@ -4821,8 +4830,29 @@ Third term\\
 \end{problem}
 
 \begin{problem} %205
-  This is a good problem. The authors have solved it via proof by contradiction.
+  This is a good problem. The authors have solved it via proof by contradiction. Common ratio is taken as $q$.
 
+  \begin{gather*}
+    3 = 2 \cdot q^n \\
+    5 = 3 \cdot q^m
+  \end{gather*}
+  for some value of $m$ and $n$. We can manipulate
+
+  \begin{gather*}
+    q^n =\dfrac{3}{2}\\ \\
+    q^m =\dfrac{5}{3} \\ \\
+    \Bigl(\dfrac{3}{2}\Bigr)^m = q^{mn} = \Bigl(\dfrac{5}{3}\Bigr)^n\\ \\
+    \dfrac{3^m}{2^m} = \dfrac{5^n}{3^n}\\ \\
+    3^{m + n} = 2^m \cdot 5^n
+  \end{gather*}
+
+  Now the left hand side is an odd number whereas the right hand side is always an even number when $m \ne 0$. For $m = 0$ 
+  we basically equate it as 3 equals to 5 which is also not true.
+
+  Therefore, this is not possible. This is the proof by contradiction.
+\end{problem}
+
+\begin{problem} %206
   
 \end{problem}
 
