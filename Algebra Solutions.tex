@@ -1,6 +1,7 @@
 \documentclass[10pt]{article}
 \usepackage{amsmath}
 \usepackage{comment}
+\usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{longdivision}
@@ -37,11 +38,27 @@
 \usepackage{ccicons}
 \usepackage[
     type={CC},
-    modifier={by-sa},
+    modifier={by-nc-sa},
     version={4.0},
 ]{doclicense}
 
-\title {Solutions to \textit{Algebra}\\
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+
+% Footer center
+\fancyfoot[C]{\small\textcolor{gray}{
+GitHub repository: \href{https://github.com/deepak-venkatesh/gelfand-shen-algebra}{github.com/deepak-venkatesh/gelfand-shen-algebra}
+}}
+
+
+% Page number (optional)
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\title {An Unofficial Compendium of Worked Solutions to the Problems in \textit{Algebra}\\
 [0.5em]\large by I.M. Gelfand \& A. Shen}
 
 \author{Deepak Venkatesh}
@@ -63,16 +80,83 @@
 \maketitle
 \begin{abstract}
 \noindent
-\textit{Algebra} by I.M.Gelfand and A.Shen, first published in September 1993, is a 150 page book
-covering 72 topics related to school level algebra. The book presents 342 problems some with
-solutions, and others without. This booklet aims to provide correct solutions to all
-the 342 problems listed in \textit{Algebra}. Each solution is carefully checked, either by hand (particularly for proofs)
-or programmatically using Scheme (a dialect of Lisp). LLMs have helped
-me in drawing figures in \LaTeX. All errors are my own, please report
-any issue \href{https://github.com/deepak-venkatesh/gcpm/issues}{here}.
+This book is an independent and unofficial collection of worked solutions
+to problems inspired by the book \textit{Algebra} by I.\,M.~Gelfand and A.~Shen,
+first published in 1993. The original text presents a wide range of problems
+in elementary algebra, some accompanied by solutions and others left as exercises
+for the reader.\\
+
+\noindent
+The aim of this book is to provide clear, logically consistent solutions
+to all problems addressed, written in a style accessible to motivated students
+and self learners. Proofs have been verified primarily by hand, and in some cases
+supported by small computational checks written in Scheme (a dialect of Lisp).
+Large language models were used only as auxiliary tools, primarily for generating
+figures in \LaTeX\ and for reviewing exposition.\\
+
+\noindent
+This work is not affiliated with, endorsed by, or approved by the original authors
+or publisher. Any errors, omissions, or inconsistencies are entirely my own.
+Issues and corrections may be reported at
+\href{https://github.com/deepak-venkatesh/gelfand-shen-algebra/issues}{this repository}.
 \end{abstract}
-\vspace{27em}
-\doclicenseThis
+
+\clearpage
+\thispagestyle{empty}
+
+\vspace*{2cm}
+
+\begin{center}
+  {\Large \textbf{Copyright and Disclaimer}}
+\end{center}
+
+\vspace{1cm}
+
+\noindent
+\textbf{Unofficial companion.}
+
+\vspace{0.4cm}
+
+\noindent
+This document is an \textbf{independent, unofficial collection of worked solutions}
+to problems from \textit{Algebra} by I.\,M.~Gelfand and A.~Shen (first published 1993).
+
+\vspace{0.4cm}
+
+\noindent
+This work is \textbf{not affiliated with, endorsed by, or approved by} the original
+authors or the publisher. The names of the authors and the title of the book are used
+only for identification and reference.
+
+\vspace{0.4cm}
+
+\noindent
+The original problem statements are not reproduced here. All exposition and solutions
+are written independently by the author of this document.
+
+\vspace{1.5cm}
+
+\noindent
+\textbf{Copyright \textcopyright\ \the\year\ Deepak Venkatesh}
+
+\vspace{1.5cm}
+
+\noindent
+License: \doclicenseThis
+
+\vfill
+
+\noindent
+Project repository:\\
+\href{https://github.com/deepak-venkatesh/gelfand-shen-algebra}{https://github.com/deepak-venkatesh/gelfand-shen-algebra}
+
+\clearpage
+
+\begin{comment}
+  \vspace{27em}
+  \doclicenseThis
+\end{comment}
+
 \newpage
 \tableofcontents
 \newpage % start sections on a fresh page
@@ -4720,7 +4804,25 @@ Third term\\
 \section{Different problems about progressions}
 
 \begin{problem} %204
+  The authors give a hint. But the other way to look at it is that the numbers in the denominator could have a greatest 
+  common divisor difference. Having done this we would start getting terms which would start falling into an arithmetic
+  progression.
+
+  Let us try it.
+
+  The first term is $\dfrac{1}{2} = \dfrac{15}{30}$, this we get after multiplying numerator and denominator by $\dfrac{1}{15}$.
+  So the terms are.
+  \[
+  \dfrac{15}{30}, ... , \dfrac{10}{30}, ... ,\dfrac{6}{30}, ...
+  \]
+
+  We can now easily see the pattern in the numerator that they are decreasing by 1. Thus it is an arithmetic progression.
   
+\end{problem}
+
+\begin{problem} %205
+  This is a good problem. The authors have solved it via proof by contradiction.
+
   
 \end{problem}
 
