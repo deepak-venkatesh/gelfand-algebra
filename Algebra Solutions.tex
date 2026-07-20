@@ -4953,8 +4953,85 @@ Third term\\
 \end{problem}
 
 \begin{problem} %215
-  This is one of the challenging problems.
-  
+  This is one of the challenging problems. In this we have to find out the general $n^{th}$ term of a Fibonacci sequence.
+  This is known as Binet's Formula, named after the 19th century French mathematician Jacques Binet. Though the derivation
+  of this formula was known a century earlier by mathematicians such as Abraham de Moivre, Daniel Bernoulli, and the master Euler.
+
+  The Art of Problem Solving wiki has multiple 
+  \href{https://artofproblemsolving.com/wiki/index.php/Binet%27s_Formula?srsltid=AfmBOopZoFLXIajI-JoM3fYvZ8skdUXvlgDV4u0u3smoftRnyHuo1zZK}{solutions}.
+  We will use a proof which is algebraic in nature and is a continuation of the previous problem (same as the first AoPS proof). A shootout to AoPS for writing
+  really good books on problem solving. These books must also be consumed by the curious student.
+
+  In the previous problem we had a geometric series where one term is the sum of the previous two terms. If $r$ was the common ratio
+  this series we got the quadratic as $r^2 - r - 1 = 0$ and the roots are $r = \dfrac{1 + \sqrt{5}}{2}, \dfrac{1 - \sqrt{5}}{2}$.
+
+  We can use this quadratic to build all the terms of Fibonacci sequence and also generalize a term.
+  Given from the quadratic:
+  \[
+  r^2 = r + 1
+  \]
+  First term
+  \begin{gather*}
+    r = r
+  \end{gather*}
+  Second term
+  \begin{gather*}
+    r^2 = r + 1
+  \end{gather*}
+  Third term
+  \begin{align*}
+    r^3 &= r \cdot r^2\\
+    &= r \cdot (r + 1)\\
+    &= r^2 + r\\
+    &= r + 1 + r\\ 
+    &= 2r + 1
+  \end{align*}
+  Fourth term
+  \begin{align*}
+    r^4 &= r \cdot r^3\\
+    &= r \cdot (2r + 1)\\
+    &= 2r^2 + r\\
+    &= 2r + 2 + r\\ 
+    &= 3r + 2
+  \end{align*}
+  Similarly we get other terms\\
+  1st term: $r$\\
+  2nd term: $r + 1$\\
+  3rd term: $2r + 1$\\
+  4th term: $3r + 2$\\
+  5th term: $5r + 3$\\
+  6th term: $8r + 5$\\
+  7th term: $13r + 8$\\
+  8th term: $21r + 13$\\
+  9th term: $34r + 21$\\
+
+  We get the pattern that $r^n = F_{n}r + F_{n - 1}$.\\
+  From the previous problem we know that the two roots will be
+  $r = \dfrac{1 + \sqrt{5}}{2}, \dfrac{1 - \sqrt{5}}{2}$, thus we can form two equations.
+
+  Equation 1:
+  \[
+  \left(\dfrac{1 + \sqrt{5}}{2}\right)^n = F_{n}\dfrac{1 + \sqrt{5}}{2} + F_{n - 1}
+  \]
+  Equation 2:
+  \[
+  \left(\dfrac{1 - \sqrt{5}}{2}\right)^n = F_{n}\dfrac{1 - \sqrt{5}}{2} + F_{n - 1}
+  \]
+
+  Subtracting equation 2 from equation 1 we get:
+  \[
+  \left(\dfrac{1 + \sqrt{5}}{2}\right)^n - \left(\dfrac{1 - \sqrt{5}}{2}\right)^n = F_{n}\left(\dfrac{1 + \sqrt{5}}{2} - \dfrac{1 - \sqrt{5}}{2} \right)
+  \]
+  Rearranging and simplifying the above equation
+  \[
+  F_{n} = \dfrac{1}{\sqrt5}\left(\dfrac{1 + \sqrt{5}}{2}\right)^n - \dfrac{1}{\sqrt5}\left(\dfrac{1 - \sqrt{5}}{2}\right)^n
+  \]
+  \[
+  F_{n} = \left(\dfrac{1}{\sqrt5}\right)\left(\dfrac{1 + \sqrt{5}}{2}\right)^n + \left(-\dfrac{1}{\sqrt5}\right)\left(\dfrac{1 - \sqrt{5}}{2}\right)^n
+  \]
+
+  Hence we have derived the value of $A$ and $B$ as $\dfrac{1}{\sqrt5}$ and $-\dfrac{1}{\sqrt5}$ respectively.
+
 \end{problem}
 
 %%%%%%%%%% 44
