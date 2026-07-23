@@ -5190,17 +5190,241 @@ No problems in this chapter.
 \end{problem}
 
 \begin{problem} %224
+  (a) 
+  \begin{gather*}
+    x^2 - 4 = 0\\
+    x^2 - 2^2 = 0\\
+    (x - 2) (x + 2) = 0\\
+    x = 2, -2
+  \end{gather*}
+
+  (b)
+  \begin{gather*}
+    x^2 + 2 = 0\\
+    x^2 = -2\\
+    x = \sqrt{-2}\\
+    x = \sqrt{2}i
+  \end{gather*}
   
+  (c)
+  \begin{gather*}
+    x^2 - 2x + 1 = 0\\
+    (x - 1)^2 = 0\\
+    x = 1
+  \end{gather*}
+
+  (d)
+  \begin{gather*}
+    x^2 - 2x + 1 = 9\\
+    x^2 - 2x - 8 = 0\\
+    (x - 4) (x + 2) = 0\\
+    x = 4, -2
+  \end{gather*}
+
+  (e)
+  \begin{gather*}
+    x^2 - 2x - 8 = 0\\
+    (x - 4) ( x + 2) = 0\\
+    x = 4, -2
+  \end{gather*}
+
+  (f)
+  \begin{gather*}
+    x^2 - 2x - 3 = 0\\
+    (x - 3) ( x + 1) = 0\\
+    x = 3, -1
+  \end{gather*}
+
+  (g)
+  \begin{gather*}
+    x^2 - 5x + 6 = 0\\
+    (x - 3) (x - 2) = 0\\
+    x = 3, 2
+  \end{gather*}
+
+  (h)
+  \begin{gather*}
+    x^2 - x - 2 = 0\\
+    (x - 2) (x + 1) = 0\\
+    x = 2, -1
+  \end{gather*}
 \end{problem}
+
+\begin{problem} %225
+  When $bx + c = 0$ and $b = 0$, it implies that $c = 0$. In this specific case all $a$, $b$, and $c$ turn out to be 0. 
+  To correct this error we need to have a constraint that $x = -\dfrac{c}{b}$ only when $b \ne 0$.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 49
 \section{The case $p = 0$. Square roots}
 
+\begin{problem} %226
+  This is solved in the book elegantly looking at various sub cases. The attempt below is a smaller proof which uses the same proof 
+  by contradiction approach but also uses the fundamental theory of arithmetic. This proof is fairly similar to what the authors have 
+  written but this was given by the Greeks.
+
+  Let $\sqrt{2} = \dfrac{m}{n}$ where $m$ and $n$ are integers and $n$ is not 0 and also they have no common factors.\\
+  
+  Squaring
+  \begin{gather*}
+    m^2 = 2n^2
+  \end{gather*}
+  So $m^2$ is even\\
+  
+  Now let $k$ be an integer
+  \[
+  m = 2k
+  \]
+Substituting 
+\[
+4k^2 = 2n^2
+\]
+So,
+\[
+n^2 = 2k^2
+\]
+Here now $n$ is also even. But here both $m$ and $n$ are even and divisible by 2, contradicting the assumption that $m$ and $n$ have no common factors.
+Hence proved.
+\end{problem}
+
+\begin{problem} %227
+  We can use the same approach as our last problem. Let $\sqrt{3} = \dfrac{m}{n}$. Here $m$ and $n$ are integers with no common 
+  factors and also $n$ is not 0.
+
+ Squaring
+  \begin{gather*}
+    m^2 = 3n^2
+  \end{gather*}
+
+  So $m^2$ is divisible by 3 and we can write $3 | m$\\
+  
+  Now let $k$ be some integer
+  \[
+  m = 3k
+  \]
+
+  Substituting 
+\[
+9k^2 = 3n^2
+\]
+
+So,
+\[
+n^2 = 3k^2
+\]
+
+Here now $n$ is also divisible by 3 which is $3 | n$. But we had $m$ and $n$ as numbers with no common factors at the start and now we have ended with 3 as the common factor.
+This contradicts the assumption that $m$ and $n$ have no common factors.
+Hence proved.
+
+We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the same logic.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%% 50
 \section{Rules for square roots}
 
+\begin{problem} %228
+  Solved in the book.
+  We need to show that $\sqrt{a} \cdot \sqrt{b}$ when squared is non negative.\\
+
+  \[
+  (\sqrt{a}\cdot\sqrt{b})^2 = (\sqrt{a})^2 \cdot (\sqrt{b})^2 = a \cdot b
+  \]
+\end{problem}
+
+\begin{problem} %229
+  Similar approach to the previous problem
+  \[
+  \left(\dfrac{\sqrt{a}}{\sqrt{b}}\right)^2 = \dfrac{a}{b}
+  \]
+
+  We note that $b \ne 0$.Thus $\dfrac{a}{b}$ is non negative and defined given the properties of $a$ and $b$.
+\end{problem}
+
+\begin{problem} %230
+  No, it can be positive or negative $a$. As rightly mentioned in the book $a$ will be:
+
+  \[
+  |a| =
+  \begin{cases}
+    +a,  & \text{if } a \ge 0,\\
+    -a, & \text{if } a < 0.
+  \end{cases}
+\]
+\end{problem}
+
+\begin{problem} %231
+  (a)
+  \begin{align*}
+    \dfrac{1}{2 + \sqrt{3}} &= \dfrac{1}{2 + \sqrt{3}} \times \dfrac{2 - \sqrt{3}}{2 - \sqrt{3}}\\\\
+    &= \dfrac{2 - \sqrt{3}}{2^2 - (\sqrt{3})^2}\\\\
+    &= \dfrac{2 - \sqrt{3}}{4 - 3}\\\\
+    &= 2 - \sqrt{3}
+  \end{align*}
+\end{problem}
+
+(b)
+\begin{align*}
+  \dfrac{1}{\sqrt{7} - \sqrt{5}} &= \dfrac{1}{\sqrt{7} - \sqrt{5}} \times \dfrac{\sqrt{5} + \sqrt{7}}{\sqrt{5} + \sqrt{7}}\\\\
+  &= \dfrac{\sqrt{5} + \sqrt{7}}{(\sqrt{7})^2 - (\sqrt{5})^2}\\\\
+  &= \dfrac{\sqrt{5} + \sqrt{7}}{2}
+\end{align*}
+
+\begin{problem} % 232
+  Simplify the expression $\sqrt{1001} - \sqrt{1000}$.\\
+
+  \begin{align*}
+    &= \sqrt{1001} - \sqrt{1000} \times \dfrac{\sqrt{1001} + \sqrt{1000}}{\sqrt{1001} + \sqrt{1000}}\\\\
+    &= \dfrac{1001 - 1000}{\sqrt{1001} + \sqrt{1000}}\\\\
+    &= \dfrac{1}{\sqrt{1001} + \sqrt{1000}}
+  \end{align*}
+
+  Whereas the other term is $\dfrac{1}{10} = \dfrac{1}{\sqrt{100}}$. This clearly shows that
+  \[
+  \dfrac{1}{\sqrt{1001} + \sqrt{1000}} < \dfrac{1}{10}
+  \]
+  Implying
+   \[
+  \sqrt{1001} - \sqrt{1000} < \dfrac{1}{10}
+  \]
+\end{problem}
+
+\begin{problem} % 233
+  Now this is a problem which requires some intuition. Additionally, we are unsure what is meant by simplification but since this 
+  is solved in the book we understand what the authors want us to do.
+
+  \begin{align*}
+    3 + 2\sqrt{2} &= 1 + 2 + 2\sqrt{2}\\
+    &= (1 + \sqrt{2})^2\\
+    &\text{thus plugging this into the original expression}\\
+    &= \sqrt{(1 + \sqrt{2})^2}\\
+    &= 1 + \sqrt{2}
+  \end{align*}
+\end{problem}
+
+\begin{problem} %234
+  The solution says that we have to look at the positive expression only i.e. $\sqrt{2} - 1$.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%% 51
 \section{The equation $x^2 + px + q = 0$}
+
+\begin{problem} %235
+  
+\end{problem}
 
 %%%%%%%%%% 52
 \section{Vieta's theorem}
@@ -5264,5 +5488,6 @@ No problems in this chapter.
 
 %%%%%%%%%% 72
 \section{The harmonic mean}
+
 
 \end{document}
