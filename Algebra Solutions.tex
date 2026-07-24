@@ -5423,11 +5423,130 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
 \section{The equation $x^2 + px + q = 0$}
 
 \begin{problem} %235
-  
+  The next set of questions can easily be solved using discriminants but the authors have not introduced the concept so we will 
+  stick to how they want us to think.
+
+  \begin{gather*}
+  x^2 + 2x - 6 = 0\\
+  x^2 + 2x + 1 - 7 = 0\\
+  (x + 1)^2 = 7\\
+  x + 1 = \pm\sqrt{7}\\
+  x = \pm\sqrt{7} - 1
+  \end{gather*}
 \end{problem}
+
+\begin{problem} %236
+  \begin{gather*}
+    x^2 + 2x - 8 = 0\\
+    x^2 + 2x + 1 - 9 = 0\\
+    (x + 1)^2 = 9\\
+    x + 1 = \pm3\\
+    x = 2, -4
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %237
+  \begin{gather*}
+    x^2 + 3x + 1 = 0\\
+    x^2 + 2 \times \dfrac{3}{2} \times 1 \times x + \left(\dfrac{3}{2}\right)^2 - \left(\dfrac{3}{2}\right)^2 + 1 = 0\\
+    \left(x + \dfrac{3}{2}\right)^2 - \dfrac{9}{4} + 1 = 0\\
+    \left(x + \dfrac{3}{2}\right)^2 = \dfrac{5}{4}\\
+    x + \dfrac{3}{2} = \pm\sqrt{\dfrac{5}{4}}\\
+    x  = \pm\sqrt{\dfrac{5}{4}} - \dfrac{3}{2}
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %238
+  Now this problem is solved in the book. In the real number set this equation will have no solution but in the complex or imaginary 
+  world it does have a solution.
+
+  \begin{gather*}
+    x^2 - 2x + 2 = 0\\
+    (x - 1)^2 + 1 = 0\\
+    (x - 1)^2 = -1\\
+    x - 1 = \sqrt{-1} = \pm i\\
+    x = 1 \pm i
+  \end{gather*}
+
+  In the end of this chapter the authors do talk about imaginary roots while explaining the sub cases of completing the square method.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 52
 \section{Vieta's theorem}
+
+\begin{problem} %239
+  In case of an equation whose both roots are the same then we can say that the two root $\alpha$ and $\beta$ both are the same. 
+  Thus for the equation $x^2 + px + q = 0$ we have
+  \begin{gather*}
+    \alpha + \beta  = -p\\
+    \alpha + \alpha = 2\alpha = -p\\
+    \alpha = -\dfrac{p}{2}\\
+    \alpha \times \alpha = q\\
+    \alpha = \sqrt{q}
+  \end{gather*}
+
+  We can write the equation as 
+  \[
+  x^2 + px + \dfrac{p}{4} = 0
+  \]
+  or
+  \[
+  x^2 -2\sqrt{q}x + q = 0
+  \]
+
+  Yes, both proofs are still valid.
+\end{problem}
+
+\begin{problem} %240
+  Given a cubic equation $x^3 + px^2 + qx + r$ and let the roots be $\alpha$, $\beta$, and $\gamma$, we have 
+  \begin{gather*}
+    x^3 + px^2 + qx + r = (x - \alpha)(x - \beta)(x - \gamma)R(x)
+  \end{gather*}
+  $R(x)$ is some polynomial but we know that the left hand side is a 3 degree equation then $R(x)$ has to be a constant. Also 
+  that the coefficient of $x^3$ is 1 so that the constant $R(x) = 1$. Therefore we now have
+  \begin{gather*}
+    x^3 + px^2 + qx + r = (x - \alpha)(x - \beta)(x - \gamma) \times 1\\
+    x^3 + px^2 + qx + r = (x - \alpha)(x - \beta)(x - \gamma)\\
+    x^3 + px^2 + qx + r = x^3 - \gamma x^2 - \beta x^2 + \beta \gamma x - \alpha x^2 + \alpha \gamma x + \alpha \beta x - \alpha \beta \gamma\\
+    x^3 + px^2 + qx + r = x^3 - \alpha x^2 - \beta x^2 - \gamma x^2 + \alpha \beta x + \beta \gamma x + \gamma \alpha x - \alpha \beta \gamma\\
+    x^3 + px^2 + qx + r = x^3 - (\alpha + \beta + \gamma) x^2 + (\alpha \beta + \beta \gamma + \gamma \alpha)x - \alpha \beta \gamma
+  \end{gather*}
+
+  Comparing the coefficients we get 
+  \begin{gather*}
+    \alpha + \beta + \gamma = -p\\
+    \alpha \beta + \beta \gamma + \gamma \alpha = q\\
+    \alpha \beta \gamma = -r
+  \end{gather*}
+  Hence proved.
+\end{problem}
+
+\begin{problem} %241
+  Using Vieta's theorem
+  \begin{gather*}
+    (x_1 + x_2)^2 = x_1^2 + x_2^2 + 2x_1x_2\\
+    (-p)^2 = x_1^2 + x_2^2 + 2q\\
+     x_1^2 + x_2^2 = p^2 - 2q
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %242
+  Using Vieta's theorem
+  \begin{gather*}
+    (x_1 - x_2)^2 = x_1^2 + x_2^2 - 2x_1x_2 = p^2 - 2q - 2q = p^2 - 4q
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %243
+  
+\end{problem}
+
+
 
 %%%%%%%%%% 53
 \section{Factoring $ax^2 + bx + c$}
