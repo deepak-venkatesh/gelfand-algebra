@@ -5543,9 +5543,128 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
 \end{problem}
 
 \begin{problem} %243
-  
+  \textcolor{red}{PENDING To Be Done - Theory of depressed cubic, general methods, history of Taratalia and Cardano and Galois}
+\end{problem}
+ 
+\begin{problem} %244
+ \textcolor{red}{PENDING To Be Done - Follow up from previous problem 243}
 \end{problem}
 
+\begin{problem} %245
+  In a quadratic equation if one root is irrational the other is a conjugate of the first root. In this case we are given that 
+  the first root is $4 - \sqrt{7}$ then the conjugate of that is $4 + \sqrt{7}$. The derivation in the previous chapter is given 
+  \[
+  x_{1,2} = -\dfrac{p}{2} \pm \sqrt{\dfrac{p^2}{4} - q}
+  \]
+
+  Now using Vieta's theorem to get the polynomial.
+
+  \begin{gather*}
+    4 - \sqrt{7} + \beta = -p\\
+    4 - \sqrt{7} + 4 + \sqrt{7} = -p\\
+    p = -8
+  \end{gather*}
+
+  and
+  \begin{gather*}
+    (4 - \sqrt{7})\beta = q\\
+    (4 - \sqrt{7})(4 + \sqrt{7}) = q\\
+    q = 16 - 7 = 9
+  \end{gather*}
+
+  Therefore the quadratic equation is $x^2 - 8x + 9 = 0$.
+\end{problem}
+
+\begin{problem} %246
+
+  Given the roots are $\alpha$ and $\beta$ then by Vieta's theorem we have 
+  \[
+  \alpha + \beta = -p
+  \]
+  \[
+  \alpha\beta = q
+  \]
+
+  We also know that $p$ and $q$ are integers.
+
+  (a)
+  \begin{gather*}
+    (\alpha + \beta)^2 = \alpha^2 + \beta^2 + 2\alpha\beta\\
+    \alpha^2 + \beta^2 = (-p)^2 + 2q = p^2 + 2q
+  \end{gather*}
+  Since $p$ and $q$ are integers so will $p^2 + 2q$ will be an integer.
+
+  (b)
+  \begin{gather*}
+    (\alpha + \beta)^3 = \alpha^3 + \beta^3 + 3\alpha\beta(\alpha + \beta)\\
+    \alpha^3 + \beta^3 = -p^3 + 3q(-p)\\
+    \alpha^3 + \beta^3 = -p^3 - 3pq
+  \end{gather*}
+  Since $p$ and $q$ are integers $-p^3 - 3pq$ will also be an integer.
+
+  (c)
+  This is an interesting problem and can be easily deduced using binomial expansion of $(\alpha + \beta)^n$ or even looking at 
+  Pascal's triangle (on the cover page of the book itself).
+
+  We saw from (a) and (b) above that $\alpha^2 + \beta^2$ and $\alpha^3 + \beta^3$ are both integers. If we can show that for powers of 4, 5, 6, 7, ... and then for $n$ case and then $(n + 1)$ cas this still holds 
+  true we would have proved our assertion that $\alpha^n + \beta^n$ is also an integer. 
+
+  Let us look at $\alpha^4 + \beta^4$ and expand using binomial expansion (taking an easy way to just use the numbers from Pascal's triangle since we have derived it earlier in the book).
+
+  \begin{gather*}
+    (\alpha + \beta)^4 = \alpha^4 + 4\alpha^3\beta + 6\alpha^2\beta^2 + 4\alpha\beta^3 + \beta^4\\
+    (\alpha + \beta)^4 = \alpha^4 + \beta^4 + 4\alpha^3\beta + 4\alpha\beta^3 + 6\alpha^2\beta^2\\
+    (\alpha + \beta)^4 = \alpha^4 + \beta^4 + 4\alpha\beta (\alpha^2 + \beta^2) + 6(\alpha\beta)^2\\
+    \alpha^4 + \beta^4 = (\alpha + \beta)^4 - 4\alpha\beta (\alpha^2 + \beta^2) - 6(\alpha\beta)^2\\
+    \alpha^4 + \beta^4 = (-p)^4 - 4q (\alpha^2 + \beta^2) - 6q^2\\
+  \end{gather*}
+
+  We notice that the only term $\alpha^2 + \beta^2$ needs to be shown to be an integer. This we have already shown in (a) of this problem.
+  Note that this was an even power i.e. 4. Now lets look at power 5.
+
+  \begin{gather*}
+    (\alpha + \beta)^5 = \alpha^5 +  5\alpha^4\beta + 10\alpha^3\beta^2 + 10\alpha^2\beta^3 + 5\alpha\beta^4 + \beta^5\\
+    \alpha^5 + \beta^5 = (\alpha + \beta)^5 - 5\alpha^4\beta - 5\alpha\beta^4 - 10\alpha^3\beta^2 - 10\alpha^2\beta^3\\
+    \alpha^5 + \beta^5 = (\alpha + \beta)^5 - 5\alpha\beta(\alpha^3 + \beta^3) - 10(\alpha\beta)^2 (\alpha + \beta)\\
+    \alpha^5 + \beta^5 = (-p)^5 - 5q(\alpha^3 + \beta^3) - 10(q)^2 (-p)
+  \end{gather*}
+
+  Again we notice every term on the right hand side is an integer and the term $\alpha^3 + \beta^3$ has been proven to be an integer in (b) part of this problem.
+
+  So we get a pattern here: If we look at the even powers of $(\alpha^{2k} + \beta^{2k})$ then the term we need to be sure is an integer is 
+  $(\alpha^{2k - 2} + \beta^{2k - 2})$ and similarly for odd powers we need to prove for $(\alpha^{2m - 1} + \beta^{2m -1})$. This will always be 
+  true since that follows from prior proofs. This is a nice intuitive proof. But here is a generalized induction based proof without using binomial expansion and Pascal's triangle (though this requires some deductive manipulations).\\
+ 
+  Let $\alpha$ and $\beta$ are the two roots of the equation $x^2 + px + q = 0$. Substituting the root in the equation.
+  \begin{gather*}
+    \alpha^2 + p\alpha + q = 0\\
+    \alpha^2 = -p\alpha - q
+  \end{gather*}
+
+  Similarly 
+  \[
+  \beta^2 = -p\beta - q
+  \]
+
+  Multiplying $\alpha^2 = -p\alpha - q$ with $\alpha^{n - 2}$ and for $\beta^2 = -p\beta - q$ with $\beta^{n - 2}$. We get
+  \begin{gather*}
+    \alpha^n = -p\alpha^{n - 1} - q\alpha^{n - 2}\\
+    \beta^n = -p\beta^{n - 1} - q\beta^{n - 2}
+  \end{gather*}
+
+  Now sum these two equations above, we get
+  \begin{gather*}
+    \alpha^n + \beta^n = -p(\alpha^{n - 1} + \beta^{n - 1}) - q(\alpha^{n - 2} + \beta^{n - 2})\\
+    S_n = -pS_{n - 1} -qS_{n - 2}
+  \end{gather*}
+
+  Here $S_n$ sum of squares of the roots of $n$ degree equation. 
+  We can see that $S_0 = \alpha^0 + \beta^0 = 2$ and $S_1 = \alpha + \beta = -p$ and so on and so forth. So now $S_{n - 1}$ and $S_{n -2}$ 
+  both will be integers and hence $S_n$ will also be an integer.
+
+  The logic used is the same in both the proofs.
+
+\end{problem}
 
 
 %%%%%%%%%% 53
