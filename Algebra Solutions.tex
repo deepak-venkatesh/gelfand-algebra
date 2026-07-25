@@ -5663,7 +5663,97 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
   both will be integers and hence $S_n$ will also be an integer.
 
   The logic used is the same in both the proofs.
+\end{problem}
 
+\begin{problem} %247
+  (a) Computing square
+  \begin{gather*}
+    (a + b\sqrt{2})^2\\
+    a^2 + 2b^2 + 2\sqrt{2}ab
+  \end{gather*}
+
+  Here the expression is of the form
+  \begin{gather*}
+     a^2 + 2b^2 + 2\sqrt{2}ab = k + l\sqrt{2}\\
+     k = a^2 + 2b^2\\
+     l = 2ab
+  \end{gather*}
+
+  $k$ and $l$ will be integers since $a$ and $b$ are integers.
+
+  (b) We can expand the given expression using binomial expansion and then we will be able to prove what we are asked to do so.
+  \begin{gather*}
+    (a + b\sqrt{2})^n = a^n + \binom{n}{1} a^{n - 1} (b\sqrt{2}) + \binom{n}{2} a^{n - 2} (b\sqrt{2})^2 + \binom{n}{3} a^{n - 3} (b\sqrt{2})^3 ...  + \binom{n}{n - 1} a (b\sqrt{2})^{n - 1} + (b\sqrt{2})^n
+  \end{gather*}
+
+  Let us look at the right hand side. Every term barring the odd powers of $\sqrt{2}$ will be an integer. The odd powers of $\sqrt{2}$ will end up with 
+  just a single $\sqrt{2}$ term. So actually we will get exactly what we want here. Rearranging the terms in the equation below.
+
+  \begin{gather*}
+    \left[a^n + \binom{n}{2} a^{n - 2} (b\sqrt{2})^2 ...\right] + \left[\binom{n}{1} a^{n - 1} (b\sqrt{2}) + \binom{n}{3} a^{n - 3} (b\sqrt{2})^3 ...\right]\\
+    \left[a^n + \binom{n}{2} a^{n - 2} (2b^2) ...\right] + \left[\binom{n}{1} a^{n - 1} (b) + \binom{n}{3} a^{n - 3} (2b^3) ...\right]\sqrt{2}\\
+    k + l\sqrt{2}
+  \end{gather*}
+  \[
+  k = \left[a^n + \binom{n}{2} a^{n - 2} (2b^2) ...\right] 
+  \]
+
+  \[
+  l = \left[\binom{n}{1} a^{n - 1} (b) + \binom{n}{3} a^{n - 3} (2b^3) ...\right]
+  \]
+
+  Both $k$ and $l$ will be integers as shown. Hence proved.
+
+  (c)
+  The number $(a - b\sqrt{2})^n$ will also be of the form $k +l\sqrt{2}$ because when we do the binomial expansion just like the previous (b) case 
+  we will get the same expansion only with an alternating minus sign for the odd powers of the $b\sqrt{2}$ term. A simple way 
+  to compute this is to substitute $-b$ instead of $b$ in the previous problem. We will end up with the following.
+
+  \begin{gather*}
+    \left[a^n + \binom{n}{2} a^{n - 2} (-b\sqrt{2})^2 ...\right] + \left[\binom{n}{1} a^{n - 1} (-b\sqrt{2}) + \binom{n}{3} a^{n - 3} (-b\sqrt{2})^3 ...\right]\\
+    \left[a^n + \binom{n}{2} a^{n - 2} (2b^2) ...\right] - \left[\binom{n}{1} a^{n - 1} (b) + \binom{n}{3} a^{n - 3} (2b^3) ...\right]\sqrt{2}\\
+    k - l\sqrt{2}
+  \end{gather*}
+  \[
+  k = \left[a^n + \binom{n}{2} a^{n - 2} (2b^2) ...\right] 
+  \]
+
+  \[
+  l = -\left[\binom{n}{1} a^{n - 1} (b) + \binom{n}{3} a^{n - 3} (2b^3) ...\right]
+  \]
+
+  Hence we get the form of $k -l\sqrt{2}$ which again shows that $k$ and $l$ are integers.
+
+  (d)
+  This is solved in the book. This is a typical Gelfand - Shen set up. They asked us in the first three parts of the problem to show 
+  that $a + b \sqrt{2}$ has the form $k + l\sqrt{2}$ and the same proof for $(a + b\sqrt{2})^n$. In this current problem we can convert the given 
+  term into $a + b\sqrt{2}$.
+
+  \begin{gather*}
+    a^2 - 2b^2  = 1\\
+    (a + b\sqrt{2}) (a - b\sqrt{2}) = 1
+  \end{gather*}
+  Now if we take $n^{th}$ power on both sides.
+
+  \begin{gather*}
+    (a + b\sqrt{2})^n (a - b\sqrt{2})^n = 1^n\\
+    (k + l\sqrt{2}) (k - l\sqrt{2}) = 1
+  \end{gather*}
+
+  By trial and error we know that one solution is $a = 3$ and $b = 2$ which gives $3^2 - 2 \cdot 2^2 = 1$.
+  So in the form $(k + l\sqrt{2}) (k - l\sqrt{2}) = 1$ we can take this one  solution of $(3, 2)$ and get any power of it. Let us do that. 
+  For different $n$s.
+  \begin{gather*}
+    n = 1 \Rrightarrow (3 + 2\sqrt{2})^1 \rightarrow (3, 2)\\
+    n = 2 \Rrightarrow (3 + 2\sqrt{2})^2 \rightarrow (17, 12)\\
+    n = 3 \Rrightarrow (3 + 2\sqrt{2})^3 \rightarrow (99, 70)\\
+    n = 4 \Rrightarrow (3 + 2\sqrt{2})^4 \rightarrow (577, 408)\\
+    ...
+  \end{gather*}
+
+  Thus we will get infinitely many integer solutions of the form $(3 + 2\sqrt{2})^n$ for this equation. \\
+
+  This is the famous Pell's equation in Elementary Number Theory which is of the form $x^2 - Ny^2$.
 \end{problem}
 
 
