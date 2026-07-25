@@ -5873,10 +5873,36 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
 \section{One more formula concerning quadratic equatons}
 
 \begin{problem} %254
-  
+  This is the exact derivation we did in problem 253. For the equation $ax^2 + bx + c = 0$ if the roots are given by 
+  \[
+  x_{1,2} = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \]
+  then the equation $cy^2 + by + a = 0$ has the roots as $\dfrac{1}{x_1}$ and $\dfrac{1}{x_2}$.
+
+  Now if we equate $x_{1,2}$ and $\dfrac{1}{y_{1,2}}$ we should get the result as true.
+
+  \begin{align*}
+    \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} &= \dfrac{2c}{-b \mp \sqrt{b^2 - 4ac}}\\\\
+    &= \dfrac{2c}{-b \mp \sqrt{b^2 - 4ac}} \times \dfrac{-b \pm \sqrt{b^2 - 4ac}}{-b \pm \sqrt{b^2 - 4ac}}\\\\
+    &= \dfrac{-2bc \pm 2c\sqrt{b^2 - 4ac}}{b^2 - b^2 - 4ac}\\\\
+    &= \dfrac{-2c(b \pm \sqrt{b^2 - 4ac})}{-4ac}\\\\
+    &= \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \end{align*}
+
+  Hence we were able to prove this.
 \end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%% 56
 \section{A quadratic equation becomes linear}
+
+\begin{problem} %255
+  
+\end{problem}
 
 %%%%%%%%%% 57
 \section{The graph of a quadratic polynomial}
