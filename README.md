@@ -10,7 +10,7 @@ for the reader.
 The aim of this book is to provide clear, logically consistent solutions
 to all problems addressed, written in a style accessible to motivated students
 and self learners. Proofs have been verified primarily by hand, and in some cases
-supported by small computational checks written in Scheme (a dialect of Lisp).
+supported by small computational checks written in Scheme (a dialect of Lisp) or in Python.
 Large language models were used only as auxiliary tools, primarily for generating
 figures in LaTeX and for reviewing exposition.
 
