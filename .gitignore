@@ -8,6 +8,7 @@
 !*.pdf
 !*.tex
 !*.md
+!*.ipynb
 
 # Keep the images folder
 !images/
