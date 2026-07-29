@@ -6052,11 +6052,55 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
 %%%%%%%%%% 58
 \section{Quadratic inequalities}
 \begin{problem} %261
-  
+  This is a very interesting topic but the book covers the very basics. 
+
+  \begin{gather*}
+    x^2 - 3x + 2 < 0\\
+    (x - 1) (x - 2) < 0
+  \end{gather*}
+
+  First imagine the graph of this curve $x^2 - 3x + 2$. The points where it intersects on the $X$ axis are the roots which we already know 
+  since we have factored the polynomial. The roots i.e. the points where it touches the $X$ axis are $x = 1$ and $x = 2$. We also know that the coefficient of the $x^2$ term
+  is positive so the curve is opening upwards. 
+
+  We used to call these critical points. Critical points include the points where the curve intersects or touches the axes, and the maximum and the minimum points also. Anyways 
+  we notice patterns when we transition from one critical point to another. So let us start at $+ \infty $ and move towards $+2$, we notice 
+  that both $(x - 1)$ and $(x - 2)$ will be positive. The moment the the $x$ value changes to 2 the curve intersects the $X$ axis and then $(x - 2)$ term becomes 
+  negative whereas the $(x - 1)$ remains positive meaning the product is negative, so $y$ is negative and below the $X$ axis. Then the $x$ value keep reducing towards $- \infty$
+  and when it touches $1$ it again intersects the $X$ axis and after that both $(x - 1)$ and $(x - 2)$ become negative and their product is positive. This is clearly visible from the curve at the 
+  end of this solution.
+
+  A beautiful way is to change signs on the number line and the authors have demonstrated that in the solution.
+
+  I will take a slight diversion and explain the calculus way of things too.
+  Given $f(x) = x^2 - 3x + 2$. At $x = 0$ the function $f(x) = 2$. The maxima or minima is got by differentiating the function.
+  \begin{gather*}
+    f'(x) = \dfrac{dy}{dx} = 2x - 3\\\\
+    2x - 3 = 0\\\\
+    x = \dfrac{3}{2}
+  \end{gather*}
+
+  So we have 4 critical points now the two roots and the intersection on $Y$ axis as well as the maxima or minima. This greatly helps plot the curve. Double differentiation 
+  will also help get the curvature.
+
+  Here is the curve below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\linewidth]{images/problem261.png}
+\end{figure} 
 \end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 59
 \section{Maximum and minimum values of a quadratic polynomial}
+
+\begin{problem} %262
+  
+\end{problem}
 
 %%%%%%%%%% 60
 \section{Biquadratic equations}
