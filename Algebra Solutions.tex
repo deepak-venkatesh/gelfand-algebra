@@ -6108,7 +6108,57 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
 \end{problem}
 
 \begin{problem} %263
-  
+  This is a fact I just taught my daughter today morning. It was mentioned in her workbook that for a given perimeter the rectilinear 
+  shape which has the largest area is the square. We used a piece of rope to try and construct a few examples. The challenge initially was to 
+  explain what rectilinear shapes are. \textit{Recti} comes from Latin meaning straight or upright and \textit{linear} again comes 
+  from Latin meaning simply line. So any shape made of straight lines be it a square, rectangle, some kind of L shape, a hexagon or a dodecagon etc. are 
+  all rectilinear shapes. With this aside let us prove this. 
+
+  Let there be a rectangle with length $l$ and breadth or width $b$. 
+
+  $Perimeter = p = 2(l + b)$
+
+  $Area = a = lb$
+
+  Let us substitute value of $l$ from the perimeter equation into the area since we know $p$ is a constant here. We get:
+
+  \begin{gather*}
+    a = \left(\dfrac{p}{2} - b\right)b\\
+    a = \dfrac{pb - 2b^2}{2}\\
+    a = -b^2 + \dfrac{p}{2}b
+  \end{gather*}
+
+  We have a quadratic equation above. We can see the the parabola formed opens downwards. We also see at $a = 0$ the parabola touches the horizontal axis at 
+  $b = 0$ and $b = \dfrac{p}{2}$. The middle point from $0$ to $\dfrac{p}{2}$ will be the vertex and the highest point of the parabola. The middle 
+  point is $\dfrac{p}{4}$. So we have $l = \dfrac{p}{4}$ for the figure with maximum area.
+  \begin{gather*}
+    p = 2(l + b)\\
+    p = 2(\dfrac{p}{4} + b)\\
+    b = \dfrac{p}{2} - \dfrac{p}{4}\\
+    b = \dfrac{p}{4}
+  \end{gather*}
+
+  As we can see both length and breadth of this rectangle is equal to $\dfrac{p}{4}$, hence it is a square.
+
+  If we were to use calculus then we would find the maxima of this curve easily. 
+
+  \begin{gather*}
+    a = -b^2 + \dfrac{p}{2}b\\
+    \dfrac{da}{db} = -2b + \dfrac{p}{2} = 0\\
+    2b = \dfrac{p}{2}\\
+    b = \dfrac{p}{4}
+  \end{gather*}
+
+  From here on we can we do the same substitution to arrive at the proof. The graph for an instance of this problem looks like this 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.1\linewidth]{images/problem263.png}
+\end{figure} 
+\end{problem}
+
+\begin{problem} %264
+  This should be similar to the proof above.
 \end{problem}
 
 %%%%%%%%%% 60
