@@ -6540,8 +6540,43 @@ y = math.pow(4, 1 / 4)
 print(f"x is {x} and y is {y}")
 
 >> x is 1.4422495703074083 and y is 1.4142135623730951
-\end{lstlisting}
-  
+\end{lstlisting}  
+\end{problem}
+
+
+\begin{problem} %275
+  Let 
+  \begin{gather*}
+    x = \sqrt{\sqrt{2}}\\
+    x^2 = \sqrt{2}\\
+    x^4 = 2\\
+    y = \sqrt[4]{2}\\
+    y^4 = 2
+  \end{gather*}
+
+  We see that $x = y$ hence $\sqrt{\sqrt{2}} = \sqrt[4]{2}$. Verifying this in python
+
+  \begin{lstlisting}
+# Problem 275
+
+import math
+
+x =math.pow(math.pow(2, 1 / 2), 1 / 2)
+y = math.pow(2, 1 / 4)
+
+print(f"x is {x} and y is {y}")
+
+>> x is 1.189207115002721 and y is 1.189207115002721
+\end{lstlisting} 
+\end{problem}
+
+\begin{problem} %276
+  The definition given in this chapter is that a root of a number $x$ is the number whose value is 
+  the power raised to that root and equal to $x$. Example a square root of 4 is the number whose square is equal to 4. 
+  The cube root of 9 is the number whose value when raised to 3 is equal to 9.
+
+  Therefore a one root of a number $a$ is the value of the number equal to when it is raised by 1 equal to $a$ in this 
+  case it is a itself. Here $a$ is non negative. Answer is given in the book.
 \end{problem}
 
 %%%%%%%%%% 64
