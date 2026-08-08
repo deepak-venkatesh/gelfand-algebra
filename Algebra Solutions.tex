@@ -6579,6 +6579,80 @@ print(f"x is {x} and y is {y}")
   case it is a itself. Here $a$ is non negative. Answer is given in the book.
 \end{problem}
 
+\begin{problem} %277
+  The proof is given in the book and simply uses the multiplication of $(xy)^n = x^n \cdot y^n$ as the proof in a way.
+  Let $x = \sqrt[n]{a}$ and $y = \sqrt[n]{b}$ then putting it back in the earlier equation we get. 
+
+  \begin{gather*}
+    (xy)^n = x^n \cdot y^n\\
+    (\sqrt[n]{a} \cdot \sqrt[n]{b})^n = (\sqrt[n]{a})^n \cdot (\sqrt[n]{b})^n = ab
+  \end{gather*}
+
+  Hence shown as required.
+\end{problem}
+
+\begin{problem} %278
+  Simply use the derivation from the last problem, here the numbers are $a$ and $\frac{1}{b}$. But the authors 
+  mention that $a$ and $b$ are non negative. I think we should be saying $a$ is non negative and $b$ is positive (as $b$ cannot be 0). 
+
+  It simply becomes exactly like the previous problem and thus proved.
+  \begin{gather*}
+    \left(\dfrac{x}{y}\right)^n = \dfrac{x^n}{y^n}\\
+    \left(\dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}\right)^n = \dfrac{(\sqrt[n]{a})^n}{(\sqrt[n]{b})^n} = \dfrac{a}{b}
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %279
+  Same as the last problem again. Here the only change is that $\sqrt[n]{1} = 1$ always. This is by the 
+  definition of the root given in the chapter. Using this we prove that 
+  \begin{gather*}
+    \sqrt[n]{\dfrac{1}{a}} = \dfrac{\sqrt[n]{1}}{\sqrt[n]{a}} = \dfrac{1}{\sqrt[n]{a}}
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %280
+  This is solved in the book and is exactly a generalization of problem 277.
+
+  \begin{gather*}
+    \sqrt[n]{abc} = \sqrt[n]{(ab)c} = \sqrt[n]{ab} \cdot \sqrt[n]{c} = \sqrt[n]{a} \cdot \sqrt[n]{b} \cdot \sqrt[n]{c}
+  \end{gather*}
+
+  And again we expand the $ab$ $n^{th}$ root. This can be generalized to any number of terms under the 
+  root, it does not matter.
+\end{problem}
+
+\begin{problem} %281
+  This gets used a lot in problem solving therefore nice to prove this. Use the proof from the last problem. 
+
+  \begin{gather*}
+    \sqrt[n]{a^m} = \sqrt[n]{\underbrace{a \cdot a \cdot a ... a}_{\text{m times}}}\\
+  \end{gather*}
+
+  Now using the relationship $\sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b}$
+ 
+  \begin{gather*}
+    \sqrt[n]{a^m} = \sqrt[n]{\underbrace{a \cdot a \cdot a ... a}_{\text{m times}}}\\\\
+    \sqrt[n]{a^m} = \underbrace{\sqrt[n]{a} \cdot \sqrt[n]{a} \cdot \sqrt[n]{a} ... \sqrt[n]{a}}_{\text{m times}}\\\\
+    \sqrt[n]{a^m} = (\sqrt[n]{a})^m
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %282
+  The book says there is a flaw. Not really. The solution is getting more generalized in this problem over the last one. 
+  The authors prove it for a negative exponent and it holds true. Assume third root of a square of a fraction.
+
+  \begin{gather*}
+    \sqrt[3]{a^{-2}} = \sqrt[3]{\dfrac{1}{a^2}} = \dfrac{1}{\sqrt[3]{a^2}} = \dfrac{1}{(\sqrt[3]{a})^2} = (\sqrt[3]{a})^{-2}
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %283
+  
+\end{problem}
+
+
+
+
 %%%%%%%%%% 64
 \section{Non-integer inequalities}
 
