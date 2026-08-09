@@ -6685,8 +6685,151 @@ print(f"x is {x} and y is {y}")
 \section{Non-integer inequalities}
 
 \begin{problem} %286
+  This is a broad question but I will try and cover every property (7 of them) from the last chapter. Listing them down \\
+  
+  \textbf{Property 1:}
+  \[
+  \sqrt[n]{ab} = \sqrt[n]{a} \cdot \sqrt[n]{b}
+  \]
+
+  \textbf{Property 2:}
+  \[
+  \sqrt[n]{\dfrac{a}{b}} = \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}
+  \]
+
+  \textbf{Property 3:}
+  \[
+  \sqrt[n]{abc} = \sqrt[n]{a} \cdot \sqrt[n]{b} \cdot \sqrt[n]{c}
+  \]
+
+  \textbf{Property 4:}
+  \[
+  \sqrt[n]{a^m} = (\sqrt[n]{a})^m
+  \]
+
+  \textbf{Property 5:}
+  \[
+  \sqrt[mn]{a} = \sqrt[m]{\sqrt[n]{a}}
+  \]
+
+  \textbf{Property 6:}
+  \[
+  \sqrt[mn]{a^n} = \sqrt[m]{a}
+  \]
+
+  \textbf{Property 7:}
+  \[
+  \sqrt[n]{a^nb} = a\sqrt[n]{b}
+  \]
+
+  Now we will substitute $\sqrt[m]{...}$ with the power raised to $\frac{1}{m}$ and $\sqrt[n]{...}$ with the power raised to $\frac{1}{n}$ and check all the 7 properties. The preceding text 
+  in this chapter has already shown the basic ones so not covering that. Also we will equate $p = \frac{1}{m}$ and $q = \frac{1}{n}$.\\
+  
+  \textbf{Property 1:} Holds true
+  \begin{align*}
+  \sqrt[n]{ab} &= a^{\frac{1}{n}} b^{\frac{1}{n}}\\
+  &= a^pb^p\\
+  &= (ab)^{p}
+  \end{align*}
+
+  \textbf{Property 2:} Holds true
+  \begin{align*}
+  \sqrt[n]{\dfrac{a}{b}} &= \dfrac{a^{\frac{1}{n}}}{b^{\frac{1}{n}}}\\\\
+  &= \dfrac{a^p}{b^p}\\\\
+  &= \left(\dfrac{a}{b}\right)^p
+  \end{align*}
+
+  \textbf{Property 3:} Holds true
+  \begin{align*}
+  \sqrt[n]{abc} &= a^p \cdot b^p \cdot c^p\\
+  &= (abc)^p
+  \end{align*}
+
+  \textbf{Property 4:} Holds true
+  \begin{align*}
+  \sqrt[n]{a^m} &= (a^m)^p\\
+  &= (a^p)^m
+  \end{align*}
+
+  \textbf{Property 5:} Holds true
+  \begin{align*}
+  \sqrt[mn]{a} &= a^{pq}\\
+  &= (a^p)^q
+  \end{align*}
+
+  \textbf{Property 6:} Holds true
+  \begin{align*}
+  \sqrt[mn]{a^n} &= ((a^n)^{\frac{1}{n}})^q\\
+  &= a^q
+  \end{align*}
+
+  \textbf{Property 7:} Holds true
+  \begin{align*}
+  \sqrt[n]{a^nb} &= (a^n)^{\frac{1}{n}} \cdot b^p\\
+  &= ab^p
+  \end{align*}
+\end{problem}
+
+\begin{problem} %287
+  The solution is given in the book. The printing looks a bit tricky in the book.
+  \begin{gather*}
+    (\sqrt[15]{a})^{10}   = (\sqrt[3 \times 5]{a})^{2 \times 5}\\
+    = \left(\left(\sqrt[5]{\sqrt[3]{a}}\right)^5\right)^2\\
+    = \left(\sqrt[3]{a}\right)^2
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %288
+  We just proved this in the previous problem. But we can generalize the proof a bit.
+
+  Let $m$ be a number which can be decomposed into a product of two integers $m = kp$ and $n$ be a number which is decomposed into $n = kq$. 
+  Here $k$ is the greatest common divisor of $m$ and $n$, therefore $p$ and $q$ are relatively prime (co-prime).
+ 
+  \begin{align*}
+    (\sqrt[n]{a})^{m} &= a^{\frac{m}{n}}\\
+    &= (\sqrt[k \times q]{a})^{k \times p}\\
+    &= \left(\left(\sqrt[k]{\sqrt[q]{a}}\right)^k\right)^p\\
+    &= \left(\sqrt[q]{a}\right)^p\\
+    &= a^{\frac{p}{q}}
+  \end{align*}
+
+  Thus we show $a^{\frac{m}{n}} = a^{\frac{p}{q}}$.
+\end{problem}
+
+\begin{problem} %289
+  Not sure why the authors have proved it the way they have done. 
+
+  \begin{gather*}
+    a^p \cdot a^q = \underbrace{a \cdot a \cdot a ...}_{\text{p times}} \times \underbrace{a \cdot a \cdot a ...}_{\text{q times}}\\\\
+    = \underbrace{a \cdot a \cdot a ...}_{\text{p + q times}}\\\\
+    = a^{p + q}
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %290
   
 \end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%% 65
 \section{Proving inequalities}
