@@ -6950,10 +6950,37 @@ Hence inequality is proven.
 \end{problem}
 
 \begin{problem} %297
-  
+This is solved in the book. 
+
+To reason this out is fairly simple. We can imagine the kind of products we would get if we were to hypothetically multiply all the terms. 
+
+To see that play out let us consider a simpler version of this problem $(1.01)^2$ as Polya has taught us. When we expand this we get 
+\begin{gather*}
+  1.01^2 = (1 + 0.01) (1 + 0.01)\\
+  1.01^2 = 1 + 0.01 + 0.01 + 0.01 \cdot 0.01
+\end{gather*}
+We observe that all the 1s multiply with each other to give 1. All the $0.01$ multiply as $0.01^2$. Rest of the terms also contribute to the sum.
+
+Now let us look at the original term $(1.01)^{100}$. This can be written as a product of $(1 + 0.01)$ 100 times.
+\begin{gather*}
+1.01^{100} = (1 + 0.01)(1 + 0.01)...(1 + 0.01)
+\end{gather*}
+
+Like our simplified problem of power 2 we can get 1s here by multiplying 100 1s. Similarly we can multiply all the $0.01$s which is also 100 in number. Ignoring all 
+the other terms for the moment which indeed will contribute to the value of this expression. We get 
+\[
+1.01^{100} = 1 \times 100 + 0.01 \times 100 + ...
+\]
+\[
+1.01^{100} = 1 + 1 + ... = 2 + ...
+\]
+
+Therefore we have proved just by reasoning that $(1.01)^{100} \ge 2$. 
 \end{problem}
 
-
+\begin{problem} %298
+  
+\end{problem}
 
 
 
