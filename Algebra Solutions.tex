@@ -6979,6 +6979,67 @@ Therefore we have proved just by reasoning that $(1.01)^{100} \ge 2$.
 \end{problem}
 
 \begin{problem} %298
+This is solved elegantly in the book. Again this requires insight to manipulate given expressions.
+
+The mental approach could be that if we can prove that 1 plus the remaining terms is less than 2 when the 'remaining' terms is less than 1. Also we notice 
+that the denominators in the 'remaining' terms are squares. Next thing we can think of is terms cancelling out. Here is the crux.
+
+\begin{gather*}
+  \dfrac{1}{4} = \dfrac{1}{2^2} < \dfrac{1}{1 \cdot 2} = \dfrac{1}{1} - \dfrac{1}{2}\\\\
+  \dfrac{1}{9} = \dfrac{1}{3^2} < \dfrac{1}{2 \cdot 3} = \dfrac{1}{2} - \dfrac{1}{3}\\\\
+  \dfrac{1}{16} = \dfrac{1}{4^2} < \dfrac{1}{3 \cdot 4} = \dfrac{1}{3} - \dfrac{1}{4}\\
+  ...
+\end{gather*}
+
+All the terms begin to cancel out in the expansion we have built here.
+\begin{gather*}
+  1 + \dfrac{1}{4} + \dfrac{1}{9} +...+\dfrac{1}{100^2} < 1 + \left(1 - \dfrac{1}{2}\right) + \left(\dfrac{1}{2} - \dfrac{1}{3}\right) + \left(\dfrac{1}{3} - \dfrac{1}{4}\right) + ... + \left(\dfrac{1}{99} - \dfrac{1}{100}\right)\\\\
+  = 1 + 1 - \dfrac{1}{100} < 2
+\end{gather*}
+\end{problem}
+
+\begin{problem} %299
+This is a nice problem. My first instinct is binomial expansion. But there is a much shorter way to figure this out. Let us do binomial expansion method first.
+
+\begin{gather*}
+  1000^{2000} = 1000^{1000} \times 1000^{1000}\\
+  2000^{1000} = (1000 + 1000)^{1000}
+\end{gather*}
+
+Now we can think of $(1000 + 1000)^{1000}$ as $(a + b)^n$ and then expand. We get
+
+\begin{gather*}
+  \binom{1000}{0}1000^{1000} \cdot 1000^0 + \binom{1000}{1}1000^{999} \cdot 1000 + \binom{1000}{2}1000^{998} \cdot 1000^2 + ... + \binom{1000}{1000}1000^{0} \cdot 1000^{1000}\\\\
+  1000^{1000}\left(1 + \binom{1000}{1} + \binom{1000}{2} + ... + \binom{1000}{999} +\binom{1000}{1000}\right)
+\end{gather*}
+
+This term $\left(1 + \binom{1000}{1} + \binom{1000}{2} + ... + \binom{1000}{999} +\binom{1000}{1000}\right)$ is actually the same as $(1 + 1)^{1000}$ since we will be 
+multiplying by 1 to all the coefficients. Therefore we know that 
+
+\[
+\left(1 + \binom{1000}{1} + \binom{1000}{2} + ... + \binom{1000}{999} +\binom{1000}{1000}\right) = 2^{1000}
+\]
+
+Therefore in the original expression we now have
+
+\begin{gather*}
+  1000^{1000}\left(1 + \binom{1000}{1} + \binom{1000}{2} + ... + \binom{1000}{999} +\binom{1000}{1000}\right) = 1000^{1000} \times 2^{1000}
+\end{gather*}
+
+We can now say that $1000^{2000} > 2000^{1000}$
+
+
+The other way to do this is to simply take the $1000^{th}$ root of both these expressions. So we have
+
+\begin{gather*}
+  \sqrt[1000]{1000^{2000}} = \sqrt[1000]{1000^{1000}} \times \sqrt[1000]{1000^{1000}} = 1000 \times 1000 = 1000000 = 10^6\\\\
+  \sqrt[1000]{2000^{1000}} = 2000
+\end{gather*}
+
+We can again say that $1000^{2000} > 2000^{1000}$ because a million is much greater than 2000.
+\end{problem}
+
+\begin{problem} %300
   
 \end{problem}
 
