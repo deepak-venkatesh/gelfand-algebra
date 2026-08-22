@@ -5544,11 +5544,307 @@ We can generally prove that $\sqrt{p}$ for any prime $p$ is irrational with the 
 \end{problem}
 
 \begin{problem} %243
-  \textcolor{red}{PENDING To Be Done - Theory of depressed cubic, general methods, history of Taratalia and Cardano and Galois}
+  This problem and the next one are challenging. Also at the end of the next problem I have collated the history about solving these equations in generality. It 
+  is very interesting.
+
+  Before jumping onto the solutions and history there was a young brilliant French mathematician named \href{https://en.wikipedia.org/wiki/Évariste_Galois}{Évariste Galois}.
+  His theory essentially leads us to
+  \begin{quote}
+    \emph{Can we extract information about the roots of a polynomial without actually solving for the roots?}
+  \end{quote}
+
+  In this solution I will use the simplest differentiation method from calculus possible i.e. differentiation of a polynomial. I will leave the explanation 
+  for it but just give the \href{https://en.wikipedia.org/wiki/Derivative}{Wikipedia} reference. Also for differentiating a polynomial $ax^n$ with respect to $x$ the derivative is $nax^{n - 1}$.\\
+
+Consider the cubic equation
+\[
+f(x) = x^3 + px^2 + qx + r = 0
+\]
+with three distinct roots $x_1,x_2,x_3$. We wish to express
+
+\[
+(x_1 - x_2)^2 (x_2 - x_3)^2 (x_1 - x_3)^2
+\]
+entirely in terms of the coefficients $p,q,r$.
+
+By Vieta's formulas,
+\[
+x_1 + x_2 + x_3 = -p
+\]
+\[
+x_1x_2 + x_1x_3 +x_2x_3 = q
+\]
+\[
+x_1x_2x_3 = -r
+\]
+
+Let
+\[
+\Delta = (x_1 - x_2)^2 (x_2 - x_3)^2 (x_1 - x_3)^2
+\]
+
+Notice first why the differences are squared. The expression
+\[
+(x_1 - x_2) (x_2 - x_3) (x_1 - x_3)
+\]
+changes sign whenever two roots are interchanged, whereas its square is unchanged by every permutation of the roots. Thus \(\Delta\) is a symmetric polynomial in the roots and can therefore be expressed in
+terms of the coefficients of the cubic.
+
+Since
+\[
+f(x) = (x - x_1) (x - x_2) (x - x_3)
+\]
+we have
+\[
+f'(x) = 3x^2 + 2px + q
+\]
+
+Evaluating the derivative at each root gives
+\[
+f'(x_1) = (x_1 - x_2) (x_1 - x_3)
+\]
+\[
+f'(x_2) = (x_2 - x_1) (x_2 - x_3)
+\]
+\[
+f'(x_3) = (x_3 - x_1) (x_3 - x_2)
+\]
+
+Multiplying,
+\begin{align*}
+f'(x_1)f'(x_2)f'(x_3)
+&= (x_1 - x_2) (x_1 - x_3) (x_2 - x_1) (x_2 - x_3) (x_3 - x_1) (x_3 - x_2)\\
+&= -(x_1 - x_2)^2 (x_2 - x_3)^2 (x_1 - x_3)^2
+\end{align*}
+
+Therefore
+\[
+\Delta=-f'(x_1)f'(x_2)f'(x_3)
+\]
+
+Since
+\[
+f'(x_i) =3x_i^2 + 2px_i + q
+\]
+we obtain
+\[
+\Delta
+= -(3x_1^2 + 2px_1 + q) (3x_2^2 + 2px_2 + q) (3x_3^2 + 2px_3 + q)
+\]
+
+Expanding this symmetric expression and using Vieta's formulas gives
+\[
+f'(x_1)f'(x_2)f'(x_3) = 4p^3r - p^2q^2 - 18pqr + 4q^3 + 27r^2
+\]
+
+Hence
+\[
+\Delta = p^2q^2 - 4q^3 - 4p^3r - 27r^2 + 18pqr
+\]
+
+Thus the discriminant of
+\[
+x^3 + px^2 + qx + r
+\]
+is
+\[
+p^2q^2 - 4q^3 - 4p^3r - 27r^2 + 18pqr
+\]
+
+The meaning of the discriminant is especially clear from its definition:
+\[
+\Delta = (x_1 - x_2)^2 (x_2 - x_3)^2 (x_1 - x_3)^2
+\]
+Thus
+\[
+\Delta=0
+\]
+if and only if at least two roots coincide.
+
+For a cubic with real coefficients,
+\[
+\Delta>0
+\]
+means that the cubic has three distinct real roots,
+\[
+\Delta<0
+\]
+means that it has one real root and two non-real complex-conjugate roots, and
+\[
+\Delta=0
+\]
+means that it has a repeated root.
 \end{problem}
- 
+
+
 \begin{problem} %244
- \textcolor{red}{PENDING To Be Done - Follow up from previous problem 243}
+Here we continue the story from the previous problem. Also give the amazing history behind this.\\
+
+Suppose
+\[
+f(x) =x^2 + px + q
+\]
+has roots $x_1,x_2$, and
+\[
+g(y) = y^2 + ry + s
+\]
+has roots $y_1,y_2$
+
+We wish to express
+\[
+(y_1 - x_1) (y_2 - x_1) (y_1 - x_2) (y_2 - x_2)
+\]
+as a polynomial in $p,q,r,s$
+
+Since $y_1,y_2$ are the roots of $g$,
+\[
+g(t) = (t - y_1) (t - y_2)
+\]
+
+Therefore
+\[
+g(x_1) = (x_1 - y_1) (x_1 - y_2) = (y_1 - x_1) (y_2 - x_1)
+\]
+because the two minus signs cancel.
+
+Similarly,
+\[
+g(x_2) = (y_1 - x_2) (y_2 - x_2)
+\]
+
+Hence the required expression is
+\[
+R = g(x_1) g(x_2)
+\]
+
+Now
+\[
+g(x_i) = x_i^2 +rx_i + s
+\]
+
+But $x_i$ satisfies
+\[
+x_i^2 + px_i + q = 0
+\]
+
+so
+\[
+x_i^2 = -px_i - q
+\]
+
+Thus
+\begin{align*}
+g(x_i)
+&= -px_i - q + rx_i + s\\
+&= (r-p) x_i + (s-q)
+\end{align*}
+
+Therefore
+\begin{align*}
+R &=\left((r - p)x_1 + (s - q)\right) \left((r - p)x_2+(s - q)\right)\\
+&=(r - p)^2x_1x_2 + (r - p)(s - q)(x_1 + x_2) + (s - q)^2
+\end{align*}
+
+By Vieta's formulas,
+\[
+x_1 + x_2 = -p, \qquad x_1x_2=q
+\]
+
+Hence
+\[
+R = q(r - p)^2 -p(r - p)(s - q) + (s - q)^2
+\]
+
+Expanding,
+\[
+R = qr^2 - pqr - prs + p^2s + s^2 - 2qs + q^2
+\]
+
+This polynomial is called the \emph{resultant} of the two quadratics.
+
+Its meaning follows immediately from
+\[
+R = (y_1 - x_1)(y_2 - x_1)(y_1 - x_2)(y_2 - x_2).
+\]
+
+We have
+\[
+R=0
+\]
+if and only if one of these four factors is zero. Thus
+\[
+R = 0 \iff \text{the two polynomials have a common root}.
+\]
+
+There is a close connection between the resultant and the discriminant. A polynomial has a repeated root exactly when the polynomial and its derivative have a common root. Thus the
+discriminant of a polynomial is essentially the resultant of the polynomial and its derivative.\\\\
+
+
+\textbf{Historical Note --- From Cubics to Galois Theory}\\
+
+For centuries mathematicians knew how to solve quadratic equations, but a general method for cubic equations remained unknown.
+
+In the early sixteenth century the Italian mathematician \href{https://en.wikipedia.org/wiki/Scipione_del_Ferro}{Scipione del Ferro} discovered a method for solving an important class of cubic equations,
+but he did not publish it widely. His method eventually became known to his student \href{https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/antonio-fior}{Antonio Fior}.
+
+In 1535 Fior challenged \href{https://en.wikipedia.org/wiki/Nicolo_Tartaglia}{Niccol\`o Tartaglia} to a mathematical contest. Tartaglia had independently discovered methods for solving cubic
+equations and defeated Fior decisively.
+
+\href{https://en.wikipedia.org/wiki/Gerolamo_Cardano}{Girolamo Cardano} later persuaded Tartaglia to reveal his method under a promise of secrecy. Cardano and his student \href{https://en.wikipedia.org/wiki/Lodovico_Ferrari}{Lodovico Ferrari}
+developed the ideas further, and Ferrari discovered a method for solving quartic equations. Cardano later found evidence that del Ferro's discovery predated Tartaglia's. In 1545 he published the
+methods for the cubic and quartic in his famous book \emph{Ars Magna}, crediting del Ferro, Tartaglia, and Ferrari. The publication nevertheless led to a bitter dispute between Tartaglia and Cardano.
+
+Thus, by the middle of the sixteenth century, general equations of degrees could all be solved using radicals.
+\[
+2,\qquad 3,\qquad 4
+\]
+
+This naturally raised the question:
+
+\begin{center}
+\emph{Is there a similar formula for equations of degree \(5\)?}
+\end{center}
+
+For nearly three hundred years mathematicians searched for one.
+
+In 1824 the Norwegian mathematician \href{https://en.wikipedia.org/wiki/Niels_Henrik_Abel}{Niels Henrik Abel} (after whom the Abel prize is named) proved that there is no formula using radicals that solves every general quintic equation.
+
+But this produced a subtler question. Some particular quintic equations \emph{can} be solved by radicals. How can we decide which ones?
+
+This question was answered by the young French mathematician \'Evariste Galois. Instead of searching directly for formulas, Galois
+studied the ways in which the roots of an equation could be \emph{permuted} while preserving the algebraic relations between
+them. These permutations form what we now call the \emph{Galois group} of the polynomial.
+
+Galois discovered that the possibility of solving an equation by radicals is controlled by the structure of this group.
+
+Problem 243 contains a small glimpse of this idea. Consider
+\[
+V = (x_1 - x_2) (x_2 - x_3) (x_1 - x_3)
+\]
+
+If two roots are interchanged, $V$  changes sign. However,
+\[
+V^2 = (x_1 - x_2)^2 (x_2 - x_3)^2 (x_1 - x_3)^2
+\]
+is unchanged by every permutation of the roots.
+
+Because it is unchanged by every permutation, it can be expressed entirely in terms of the coefficients of the polynomial. This quantity is the discriminant.
+
+Thus the discriminant and resultant illustrate an important theme that eventually became central to modern algebra:
+
+\[
+\text{\emph{Learn about the roots without explicitly solving for them.}}
+\]
+
+They also hint at an even deeper question:
+
+\[
+\text{\emph{What information remains unchanged when the roots are permuted?}}
+\]
+
+It was Galois's extraordinary insight to make that question the foundation of a theory.\\
+
+Tragically both Galois and Abel died at a very young age, 20 and 26 respectively. We will never know what else could they have discovered and proved to the world. 
 \end{problem}
 
 \begin{problem} %245
@@ -7227,11 +7523,50 @@ Hence such an $n$ exists.
 \section{The geometric mean does not exceed the arithmetic mean}
 
 \begin{problem} %306
-  
+  This is an easy proof in the book but this is an inequality which is super useful and used a lot in problem solving generally speaking.
+
+  We have to prove
+  \begin{gather*}
+    \sqrt{ab} \le \dfrac{a + b}{2}
+  \end{gather*}
+
+  Meaning Arithmetic Mean is greater than or equal to the Geometric Mean. Later we should come across Harmonic Mean too but let us look at that in the future.
+
+  Let us square both sides of the inequality. 
+
+  \begin{gather*}
+    ab \le \left(\dfrac{a + b}{2}\right)^2\\\\
+    ab \le \dfrac{(a + b)^2}{4}\\
+    4ab \le a^2 + b^2 + 2ab\\
+    a^2 + b^2 - 2ab \ge 0\\
+    (a - b)^2 \ge 0
+  \end{gather*}
+  Since we know that $a$ and $b$ are non negative therefore $(a - b)^2$ is always non-negative. Hence we proved it.
 \end{problem}
+
+\begin{problem} %307
+  Let the numbers be $a$ and $b$.
+
+  \begin{gather*}
+    \sqrt{ab} = \dfrac{a + b}{2}\\
+    ab = \dfrac{(a + b)^2}{4}\\
+    (a - b)^2 = 0\\
+    a = b
+  \end{gather*}
+
+  This happens only when $a$ and $b$ are equal.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 68
 \section{Problems about maximum and minimum}
+
+\begin{problem} %308
+  
+\end{problem}
 
 %%%%%%%%%% 69
 \section{Geometric illustrations}
