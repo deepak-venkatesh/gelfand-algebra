@@ -7577,12 +7577,93 @@ Hence such an $n$ exists.
 \end{problem}
 
 \begin{problem} %309
-  
-  
+  Let the non negative numbers be $a$ and $b$, we are given that 
+  \begin{gather*}
+    \sqrt{ab} = \sqrt{c}\\
+    ab = c
+  \end{gather*}
+  We are given that $c > 0$. We know that the minimum value of A.M. will be the maximum value of G.M. can be which is $\dfrac{(a + b)}{2}$. Therefore, this is the minimum  
+  value of $ a + b$, this is when both the numbers are equal.
+  \begin{gather*}
+    \sqrt{c} = \dfrac{a + b}{2}\\\\
+    a + b = \sqrt{2}c
+  \end{gather*}
+
+  The maximum value can be anything since it is not upper bound (while the other number can be close to 0).
 \end{problem}
+
+\begin{problem} %310
+  Let the length and breadth be $l$ and $b$ respectively. We know that $2(l + b) = 120$ meaning $l + b = 60$.
+
+  \begin{gather*}
+    GM \le AM \\\\
+    lb \le \dfrac{l + b}{2}\\\\
+    lb \le \dfrac{60}{2}\\\\
+    lb \le 30
+  \end{gather*}
+
+  Therefore the maximum area can be $30 m^2$.
+\end{problem}
+
+\begin{problem} %311
+  The solution with reasoning is elegant in the book. We imagine the quadrilateral to extend with a mirror image into the sea. So the 120 perimeter is essentially 240. 
+  Now it becomes exactly like the previous problem. To maximize the area we know it has to be a square. So the side of the square will be 60. Now back to the original 
+  3 sides square (since we will not have a fence along the ocean). The longer side will be 60 and the other two sides will 30 each (half of 60 since we cut the structure into half).
+
+  The area is $60 \times 30 = 1800 m^2$.
+
+  The calculus way of doing this is to consider the sides of a rectangle say $x$ and $y$, so the given fence length is $2x + y = 120$. We have to maximize $xy$. 
+
+  \begin{gather*}
+    A = xy = x \times (120 - 2x)\\
+    A = 120x - 2x^2
+  \end{gather*}
+
+  Differentiating with respect to $x$ and finding the solution by equating to 0.
+
+  \begin{gather*}
+    \dfrac{dA}{dx} = 120 - 4x = 0\\
+    x = 30
+  \end{gather*}
+
+  So we have it again $x = 30$ and $y = 120 - 2x = 60$ and area is $xy = 30 \times 60 = 1800 m^2$. 
+\end{problem}
+
+\begin{problem} %312
+  This is exactly the same question as above. I would prefer to use the calculus way to do it but the authors outline the solution in the book. Let us call 
+  $ab = A$
+
+  \begin{gather*}
+    ab = A = (3 - 2b) \times b\\
+    A = 3b - 2b^2 
+  \end{gather*}
+
+  Now maximizing $A$.
+
+  \begin{gather*}
+    \dfrac{dA}{db} = 3 - 4b\\
+    3 - 4b = 0\\
+    b = \dfrac{3}{4}
+  \end{gather*}
+
+  \begin{gather*}
+    a = 3 - 2b = 3 - 2 \times \dfrac{3}{4}\\
+    a = \dfrac{3}{2}
+  \end{gather*}
+
+  So the product is $\dfrac{3}{2} \times \dfrac{3}{4} = \dfrac{9}{8}$.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 69
 \section{Geometric illustrations}
+
+\begin{problem} %313
+  
+\end{problem}
 
 %%%%%%%%%% 70
 \section{The arithmetic and geometric means of several numbers}
