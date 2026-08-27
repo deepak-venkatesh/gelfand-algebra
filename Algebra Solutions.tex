@@ -7818,14 +7818,320 @@ From the last two problems using AM GM inequality relationship we learn that:\\
 \end{problem}
 
 \begin{problem} %317
+  This is solved algebraically in the book. The solution is on the lines of taking two numbers then finding out 
+  the arithmetic mean of theirs. By doing so the sum remains the same but the product gets maximized. Repeating this process 
+  for the other two numbers and then finally repeating this for a different pair again. It eventually lets us 
+  maintain a constant sum but keep maximizing the product till all the numbers are the same and is equal to the arithmetic mean of all four.
+
+  I will give the math transformations just after this paragraph but the authors allude to a proof by calculus. I am more interested to try that out.
+
+  Here is the algebraic proof. 
+
+  Let the numbers be $a, b, c, d$. Taking the averages (arithmetic mean):
+
+  \begin{gather*}
+    a , b , c, d\\
+    \dfrac{a + b}{2}, \dfrac{a + b}{2}, c, d\\\\
+    \dfrac{a + b}{2}, \dfrac{a + b}{2}, \dfrac{c + d}{2}. \dfrac{c + d}{2}\\\\
+    \dfrac{a + b + c + d}{4}, \dfrac{a + b}{2}, \dfrac{a + b + c + d}{4}, \dfrac{c + d}{2}\\\\
+    \dfrac{a + b + c + d}{4}, \dfrac{a + b + c + d}{4}, \dfrac{a + b + c + d}{4}, \dfrac{a + b + c + d}{4}
+  \end{gather*}
+
+  Let
+  \[
+  S = \dfrac{a + b + c + d}{4}
+  \]
+
+  Therefore we have
+  \[
+  a \cdot b \cdot c \cdot d \le S \cdot S \cdot S \cdot S 
+  \]
+
+  or
+  \[
+  \sqrt[4]{abcd} \le S
+  \]
+
+  Now for the calculus based proof.
+
+Let $a + b + c + d = S$, then $d = S - a - b - c$
+
+So
+\[
+f(a,b,c) = abc(S - a - b - c)
+\]
+
+At an interior maximum,
+\[
+\dfrac{\partial f}{\partial a} = 0, \dfrac{\partial f}{\partial b} = 0, \dfrac{\partial f}{\partial c} = 0
+\]
+
+Now,
+\[
+\dfrac{\partial f}{\partial a} = bc(S - 2a - b - c)
+\]
+
+\[
+\dfrac{\partial f}{\partial b} = ac(S - a - 2b - c)
+\]
+
+\[
+\dfrac{\partial f}{\partial c} = ab(S - a - b - 2c)
+\]
+
+Hence,
+\begin{gather*}
+  S - 2a - b - c = 0\\
+  S - a - 2b - c = 0\\
+  S - a - b - 2c = 0
+\end{gather*}
+
+
+Solving these three linear equations we get,
+\[
+a = b = c
+\]
+
+Also,
+\[
+d = S - a - b - c = a
+\]
+
+Therefore,
+\[
+a = b = c = d = \dfrac{S}{4}
+\]
+
+Hence,
+\[
+abcd \le \left(\dfrac{S}{4}\right)^4 = \left(\frac{a + b + c + d}{4}\right)^4
+\]
+
+Therefore,
+\[
+\sqrt[4]{abcd} \le \dfrac{a + b + c + d}{4}
+\]
+\end{problem}
+
+\begin{problem} %318
+  This is simply equating the last problems final result.
+
+\[
+\sqrt[4]{abcd} \le \dfrac{a + b + c + d}{4}
+\]
+
+We equate it now by raising to the power of 4.
+
+\begin{gather*}
+  (\sqrt[4]{abcd})^4 = \left(\dfrac{a + b + c + d}{4}\right)^4\\\\
+  abcd = \left(\dfrac{a + b + c + d}{4}\right)^4
+\end{gather*}
+
+Assume if $a = b = c = d = x$ then the equation would change into
+\begin{gather*}
+  x \cdot x \cdot x \cdot x = \left(\dfrac{x + x + x + x}{4}\right)^4\\\\
+  x^4 = \left(\dfrac{4x}{4}\right)^4\\\\
+  x^4 = x^4
+\end{gather*}
+
+Thus we can show it now.
+\end{problem}
+
+\begin{problem} %319
+  This is just a cumbersome extension of the prior proof we have done. But the method outlined in the book is better to do here. 
+
+  Let the numbers be $a_1, a_2, ... , a_8$. Taking pairs and averaging out we arrive at the following
+
+  \[
+  \dfrac{a_1 + a_2}{2}, \dfrac{a_3 + a_4}{2}, \dfrac{a_5 + a_6}{2}, \dfrac{a_7 + a_8}{2}
+  \]
+  
+  Averaging again
+  \[
+  \dfrac{a_1 + a_2 + a_5 + a_6}{4}, \dfrac{a_3 + a_4 + a_7 + a_8}{4}
+  \]
+
+  Averaging again
+  \[
+  \dfrac{a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8}{8}
+  \]
+
+  Basically all 8 numbers are this. We have averaged them out and maximized the product. 
+
+  Let that  be equal to $S$.
+
+  \[
+  S = \dfrac{a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8}{8}
+  \]
+
+  Now plugging these into the AM GM expression
+  \begin{gather*}
+    a_1 \cdot a_2 \cdot a_3 \cdot a_4 \cdot a_5 \cdot a_6 \cdot a_7 \cdot a_8 \le S \cdot S \cdot S \cdot S \cdot S \cdot S \cdot S \cdot S\\
+    a_1 \cdot a_2 \cdot a_3 \cdot a_4 \cdot a_5 \cdot a_6 \cdot a_7 \cdot a_8 \le S^8\\
+    \sqrt[8]{a_1 \cdot a_2 \cdot a_3 \cdot a_4 \cdot a_5 \cdot a_6 \cdot a_7 \cdot a_8} \le S
+  \end{gather*}
+\end{problem}
+
+\begin{problem} %320
   
 \end{problem}
 
+\begin{problem} %321
+  
+\end{problem}
+
+\begin{problem} %322
+  
+\end{problem}
+
+\begin{problem} %323
+  
+\end{problem}
+
+\begin{problem} %324
+  
+\end{problem}
+
+\begin{problem} %325
+  
+\end{problem}
+
+\begin{problem} %326
+  
+\end{problem}
+
+\begin{problem} %327
+  
+\end{problem}
+
+\begin{problem} %328
+  
+\end{problem}
+
+\begin{problem} %329
+  
+\end{problem}
+
+\begin{problem} %330
+  
+\end{problem}
+
+\begin{problem} %331
+  
+\end{problem}
+
+\begin{problem} %332
+  
+\end{problem}
+
+\begin{problem} %333
+  
+\end{problem}
 %%%%%%%%%% 71
 \section{The quadratic mean}
 
+\begin{problem} %334
+
+  So if the non-negative numbers are $a$ and $b$ then the quadratic `geometric' mean would be
+
+  \begin{gather*}
+    \sqrt{a^2 \cdot b^2} = ab
+  \end{gather*}
+
+  So that would just be the product of those two numbers.
+  
+\end{problem}
+
+\begin{problem} %335
+  We are given the following relationship and we need to prove it. Square both sides.
+  \begin{gather*}
+    \sqrt{\dfrac{a^2 + b^2}{2}} \ge \dfrac{a + b}{2}\\\\
+    \dfrac{a^2 + b^2}{2} \ge \left(\dfrac{a + b}{2}\right)^2\\\\
+    2a^2 + 2b^2 \ge a^2 + b^2 + 2ab\\
+    a^2 + b^2 - 2ab \ge 0\\
+    (a - b)^2 \ge 0
+  \end{gather*}
+
+  This will always be non-negative.
+\end{problem}
+
+\begin{problem} %336
+  From the prior problem this happens when both the numbers are equal. For instance let the number be $x$.
+
+  Quadratic mean is 
+  \[
+  \sqrt{\dfrac{a^2 + b^2}{2}} = \sqrt{\dfrac{2x^2}{2}} = x
+  \]
+
+  and the arithmetic mean is
+  \[
+  \dfrac{a + b}{2} = \dfrac{x + x}{2} = x
+  \]
+
+  Thus shown.
+\end{problem}
+
+\begin{problem} %337
+  We have to show for two non negative numbers $a$ and $b$ that 
+  \[
+  \sqrt{ab} \le \sqrt{\dfrac{a^2 + b^2}{2}}
+  \]
+  Squaring both the sides
+  \begin{gather*}
+    ab \le \dfrac{a^2 + b^2}{2}\\\\
+    a^2 + b^2 - 2ab \ge 0\\
+    (a - b)^2 \ge 0
+  \end{gather*}
+
+  This will always be true for non negative $a$ and $b$, hence proved.
+\end{problem}
+
+\begin{problem} %338
+  
+\end{problem}
+
+\begin{problem} %339
+  
+\end{problem}
+
+\begin{problem} %340
+  
+\end{problem}
+
 %%%%%%%%%% 72
 \section{The harmonic mean}
+
+\begin{problem} %341
+  Let the two non negative numbers be $a$ and $b$.
+
+  We have to prove That
+
+  \[
+  \dfrac{1}{\left(\dfrac{\dfrac{1}{a} + \dfrac{1}{b}}{2}\right)} \le \sqrt{ab}
+  \]
+
+  Simplifying 
+
+  \begin{gather*}
+    \dfrac{2}{\left(\dfrac{1}{a} + \dfrac{1}{b}\right)} \le \sqrt{ab}\\\\
+    \dfrac{2ab}{a + b} \le \sqrt{ab}
+  \end{gather*}
+  Squaring both the sides
+
+  \begin{gather*}
+    4a^2b^2 \le ab (a + b)^2\\
+    4a^2b^2 \le a^3b + ab^3 + 2a^2b^2\\
+    a^3b + ab^3 - 2a^2b^2 \ge 0\\
+    ab(a^2 + b^2 - 2ab) \ge 0\\
+    ab(a - b)^2 \ge 0
+  \end{gather*}
+
+  The left hand side will always be non negative and thus we have shown that the harmonic mean does not exceed the geometric mean.
+\end{problem}
+
+\begin{problem} %342
+  
+\end{problem}
 
 
 \end{document}
