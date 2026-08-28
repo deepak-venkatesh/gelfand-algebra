@@ -7973,18 +7973,92 @@ Thus we can show it now.
 \end{problem}
 
 \begin{problem} %320
-  
+This is solved in the book in a creative way.
+
+For an odd number of numbers the technique is to reduce the case to an even number case. This is done by taking another number which is the GM of the 3 numbers.
+Summarizing the approach given the book below: 
+
+\begin{gather*}
+a, b, c, \sqrt[3]{abc}\\\\
+\sqrt[4]{abc\sqrt[3]{abc}} \le \dfrac{a + b + c + \sqrt[3]{abc}}{4}
+\end{gather*}
+
+We know that 
+\begin{gather*}
+\sqrt[4]{abc\sqrt[3]{abc}} = \sqrt[4]{(\sqrt[3]{abc})^3 \sqrt[3]{abc}} = \sqrt[4]{(\sqrt[3]{abc})^4} = \sqrt[3]{abc}
+\end{gather*}
+
+Going back to the earlier derivation 
+\begin{gather*}
+\sqrt[4]{abc\sqrt[3]{abc}} \le \dfrac{a + b + c + \sqrt[3]{abc}}{4}\\\\
+\sqrt[3]{abc} \le \dfrac{a + b + c + \sqrt[3]{abc}}{4}\\\\
+3\sqrt[3]{abc} \le a + b + c \\
+\sqrt[3]{abc} \le \dfrac{a + b + c}{3}
+\end{gather*}
+
+This is what we intended to arrive at.
 \end{problem}
 
 \begin{problem} %321
-  
+As per Problem 317 where we proved the inequality for $n = 4$ we could extend that for an even number $n = 8$. So the following 
+would hold true
+
+\[
+\sqrt[8]{a_1a_2 \cdots a_8} \le \dfrac{a_1 + a_2 + \cdots + a_8}{8}
+\]
+
+To prove for $n = 7$ we will use exactly the same approach we used in the last problem.
+Let the numbers be $a_1, a_2, \cdots, a_7$. Then the $8^{th}$ number will be $\sqrt[7]{a_1a_2 \cdots a_7}$.
+Now the equality will hold true ie AM GM
+
+\begin{gather*}
+  \sqrt[8]{a_1 a_2 a_3 \cdots a_7 \sqrt[7]{a_1a_2 \cdots a_7}} \le \dfrac{a_1 + a_2 + \cdots + a_7 + \sqrt[7]{a_1a_2 \cdots a_7}}{8}
+\end{gather*}
+
+Using the same manipulation as the one in the earlier problem
+\begin{gather*}
+\sqrt[8]{a_1 a_2 a_3 \cdots a_7 \sqrt[7]{a_1a_2 \cdots a_7}} = \sqrt[8]{(\sqrt[7]{a_1a_2 \cdots a_7})^7 \sqrt[7]{a_1a_2 \cdots a_7}} = \sqrt[8]{(\sqrt[7]{a_1a_2 \cdots a_7})^8} = \sqrt[7]{a_1a_2 \cdots a_7}
+\end{gather*}
+
+Plugging in this value to the earlier derivation now
+\begin{gather*}
+  \sqrt[8]{a_1 a_2 a_3 \cdots a_7 \sqrt[7]{a_1a_2 \cdots a_7}} \le \dfrac{a_1 + a_2 + \cdots + a_7 + \sqrt[7]{a_1a_2 \cdots a_7}}{8}\\\\
+  \sqrt[7]{a_1a_2 \cdots a_7} \le \dfrac{a_1 + a_2 + \cdots + a_7 + \sqrt[7]{a_1a_2 \cdots a_7}}{8}\\\\
+  7\sqrt[7]{a_1a_2 \cdots a_7} \le a_1 + a_2 + \cdots + a_7\\\\
+  \sqrt[7]{a_1a_2 \cdots a_7} \le \dfrac{a_1 + a_2 + \cdots + a_7}{7}
+\end{gather*}
+
+Hence we have proved it.
 \end{problem}
 
 \begin{problem} %322
-  
+We can solve this by taking the 6 numbers then putting the $7^{th}$ number as the geometric mean of the first 6 numbers and plugging it 
+into the final expression in the previous problem as hinted by the authors.
+
+\begin{gather*}
+  \sqrt[7]{a_1 a_2 a_3 \cdots a_6 \sqrt[6]{a_1a_2 \cdots a_6}} \le \dfrac{a_1 + a_2 + \cdots + a_6 + \sqrt[6]{a_1a_2 \cdots a_6}}{7}
+\end{gather*}
+
+Using the same manipulation as the one in the earlier problem
+\begin{gather*}
+\sqrt[7]{a_1 a_2 a_3 \cdots a_6 \sqrt[6]{a_1a_2 \cdots a_6}} = \sqrt[7]{(\sqrt[6]{a_1a_2 \cdots a_6})^6 \sqrt[6]{a_1a_2 \cdots a_6}} = \sqrt[7]{(\sqrt[6]{a_1a_2 \cdots a_6})^7} = \sqrt[6]{a_1a_2 \cdots a_6}
+\end{gather*}
+
+Plugging in this value to the earlier derivation now
+\begin{gather*}
+  \sqrt[7]{a_1 a_2 a_3 \cdots a_6 \sqrt[6]{a_1a_2 \cdots a_6}} \le \dfrac{a_1 + a_2 + \cdots + a_6 + \sqrt[6]{a_1a_2 \cdots a_6}}{7}\\\\
+  \sqrt[6]{a_1a_2 \cdots a_6} \le \dfrac{a_1 + a_2 + \cdots + a_6 + \sqrt[6]{a_1a_2 \cdots a_6}}{7}\\\\
+  6\sqrt[6]{a_1a_2 \cdots a_6} \le a_1 + a_2 + \cdots + a_6\\\\
+  \sqrt[6]{a_1a_2 \cdots a_6} \le \dfrac{a_1 + a_2 + \cdots + a_6}{6}
+\end{gather*}
+Hence we are able to show the relationship as required using the previous problem.
 \end{problem}
 
 \begin{problem} %323
+We have seen that the equality holds for every even number of terms. And from every even number of terms we can derive the equality for all 
+odd number of terms. Therefore, the AM GM inequality will always hold true for all $n \ge 2$.
+
+
   
 \end{problem}
 
@@ -8087,16 +8161,206 @@ Thus we can show it now.
 \end{problem}
 
 \begin{problem} %338
-  
+Plotting the graph of this we can see the inequality.\\\\
+
+\begin{tikzpicture}[xscale=0.95,yscale=2.4]
+
+% Choose a and b far apart so the two middle y-values separate more
+\def\aval{0.25}
+\def\bval{9}
+
+\pgfmathsetmacro{\midval}{(\aval+\bval)/2}
+\pgfmathsetmacro{\sqrta}{sqrt(\aval)}
+\pgfmathsetmacro{\sqrtb}{sqrt(\bval)}
+\pgfmathsetmacro{\sqrtmid}{sqrt(\midval)}
+\pgfmathsetmacro{\chordmid}{(\sqrta+\sqrtb)/2}
+
+% Axes
+\draw[->, thick] (-0.8,0) -- (11.2,0);
+\draw[->, thick] (0,-0.2) -- (0,3.45);
+
+% Curve y = sqrt(x)
+\draw[thick, domain=0.05:11, samples=200, smooth]
+    plot (\x,{sqrt(\x)});
+
+% Chord joining (a,sqrt(a)) and (b,sqrt(b))
+\draw[thick] (\aval,\sqrta) -- (\bval,\sqrtb);
+
+% Vertical guide lines
+\draw (\aval,0) -- (\aval,\sqrta);
+\draw (\midval,0) -- (\midval,\sqrtmid);
+\draw (\bval,0) -- (\bval,\sqrtb);
+
+% Horizontal guide lines
+\draw (0,\sqrta) -- (\aval,\sqrta);
+\draw (0,\chordmid) -- (\midval,\chordmid);
+\draw (0,\sqrtmid) -- (\midval,\sqrtmid);
+\draw (0,\sqrtb) -- (\bval,\sqrtb);
+
+% Key points
+\fill (\aval,\sqrta) circle (2pt);
+\fill (\midval,\chordmid) circle (2pt);
+\fill (\midval,\sqrtmid) circle (2pt);
+\fill (\bval,\sqrtb) circle (2pt);
+
+% x-axis labels
+\node[below] at (\aval,0) {$a$};
+\node[below=2pt] at (\midval,0) {$\dfrac{a+b}{2}$};
+\node[below] at (\bval,0) {$b$};
+
+% y-axis labels
+\node[anchor=east] at (-0.1,\sqrta) {$\sqrt{a}$};
+
+\node[anchor=east] at (-0.1,\chordmid)
+    {$\displaystyle\frac{\sqrt a+\sqrt b}{2}$};
+
+\node[anchor=east] at (-0.1,\sqrtmid)
+    {$\displaystyle\sqrt{\frac{a+b}{2}}$};
+
+\node[anchor=east] at (-0.1,\sqrtb) {$\sqrt{b}$};
+
+\end{tikzpicture}
+
+The proof visually can be seeing
+\[
+\sqrt{\dfrac{a + b}{2}} \ge \dfrac{\sqrt{a} + \sqrt{b}}{2}
+\]
 \end{problem}
 
 \begin{problem} %339
-  
+Now taking 3 points $a, b, c$ on the curve $y = x^2$
+
+\begin{tikzpicture}[x=0.95cm,y=0.12cm,line cap=round,line join=round]
+
+% ------------------------------------------------
+% Internal numerical values only for spacing
+% (corresponding to a=2, b=3, c=8)
+% ------------------------------------------------
+\def\xa{2}
+\def\xb{3}
+\def\xc{8}
+
+\pgfmathsetmacro{\xm}{(\xa+\xb+\xc)/3}             % mean x
+\pgfmathsetmacro{\ya}{\xa*\xa}                     % a^2
+\pgfmathsetmacro{\yb}{\xb*\xb}                     % b^2
+\pgfmathsetmacro{\yc}{\xc*\xc}                     % c^2
+\pgfmathsetmacro{\ymcurve}{\xm*\xm}                % ((a+b+c)/3)^2
+\pgfmathsetmacro{\ymavg}{(\ya+\yb+\yc)/3}          % (a^2+b^2+c^2)/3
+
+% ------------------------------------------------
+% Axes
+% ------------------------------------------------
+\draw[->, thick] (-0.7,0) -- (9.8,0);
+\draw[->, thick] (0,-1.0) -- (0,69);
+
+% ------------------------------------------------
+% Parabola y = x^2
+% ------------------------------------------------
+\draw[thick, domain=1.2:9.2, samples=300, smooth]
+  plot (\x, {\x*\x});
+
+% ------------------------------------------------
+% Key points
+% ------------------------------------------------
+\coordinate (A) at (\xa,\ya);
+\coordinate (B) at (\xb,\yb);
+\coordinate (C) at (\xc,\yc);
+\coordinate (P) at (\xm,\ymcurve);   % point on parabola at mean x
+\coordinate (Q) at (\xm,\ymavg);     % average-of-squares height
+
+% ------------------------------------------------
+% Secant lines
+% ------------------------------------------------
+\draw[thick] (A) -- (C);
+\draw[thick] (B) -- (C);
+
+% ------------------------------------------------
+% Vertical guide lines
+% ------------------------------------------------
+\draw[thin] (\xa,0) -- (A);
+\draw[thin] (\xb,0) -- (B);
+\draw[thin] (\xc,0) -- (C);
+\draw[thin] (\xm,0) -- (Q);
+
+% ------------------------------------------------
+% Horizontal guide lines
+% ------------------------------------------------
+\draw[thin] (0,\ya) -- (\xa,\ya);
+\draw[thin] (0,\yb) -- (\xb,\yb);
+\draw[thin] (0,\yc) -- (\xc,\yc);
+\draw[thin] (0,\ymcurve) -- (\xm,\ymcurve);
+\draw[thin] (0,\ymavg) -- (\xm,\ymavg);
+
+% ------------------------------------------------
+% Marked points
+% ------------------------------------------------
+\fill (A) circle (2pt);
+\fill (B) circle (2pt);
+\fill (C) circle (2pt);
+\fill (P) circle (2pt);
+\fill (Q) circle (2pt);
+
+% ------------------------------------------------
+% x-axis labels
+% ------------------------------------------------
+\node[below] at (\xa,0) {$a$};
+\node[below] at (\xb,0) {$b$};
+\node[below] at (\xc,0) {$c$};
+
+\node[below=4pt] at (\xm,0)
+  {$\displaystyle \frac{a+b+c}{3}$};
+
+% ------------------------------------------------
+% y-axis labels
+% ------------------------------------------------
+\node[left] at (0,\ya) {$a^2$};
+\node[left] at (0,\yb) {$b^2$};
+\node[left] at (0,\yc) {$c^2$};
+
+\node[left, yshift=-4pt] at (0,\ymcurve)
+  {$\displaystyle \left(\frac{a+b+c}{3}\right)^2$};
+
+\node[left, yshift=5pt] at (0,\ymavg)
+  {$\displaystyle \frac{a^2+b^2+c^2}{3}$};
+
+\end{tikzpicture}
+
+We can see from the figure that
+\begin{gather*}
+  \left(\dfrac{a + b + c}{3}\right)^2 \le \dfrac{a^2 + b^2 + c^2}{3}\\\\
+  \dfrac{a + b + c}{3} \le \sqrt{\dfrac{a^2 + b^2 + c^2}{3}}
+\end{gather*}
 \end{problem}
 
 \begin{problem} %340
-  
+(a) This is a simple application of the relationship we learnt of arithmetic mean and quadratic mean
+\begin{gather*}
+  \dfrac{a + b}{2} \le \sqrt{\dfrac{a^2 + b^2}{2}}\\\\
+  1 \le \dfrac{a^2 + b^2}{2}\\\\
+  a^2 + b^2 \ge 2
+\end{gather*}
+
+So the minimum value of the sum of the squares is 2.
+
+(b) Now we can use the same relationship but for 3 numbers.
+\[
+\dfrac{a + b + c}{3} \le \sqrt{\dfrac{a^2 + b^2 + c^2}{3}}
+\]
+
+\[
+\left(\dfrac{2}{3}\right)^2 \le \dfrac{a^2 + b^2 + c^2}{3}
+\]
+
+\[
+a^2 + b^2 + c^2 \ge \dfrac{4}{3}
+\]
+
+Therefore the minimum value is $\dfrac{4}{3}$.
 \end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter End
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% 72
 \section{The harmonic mean}
