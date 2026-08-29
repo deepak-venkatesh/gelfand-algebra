@@ -8198,7 +8198,41 @@ Thus the product is maximal when all the numbers are equal.
 \end{problem}
 
 \begin{problem} %326
-  
+The plain vanilla way to do is to compute the fractions on the left hand side and then we can reason out the AM GM relationship.
+
+\begin{gather*}
+  \dfrac{a_1^2 \cdot \ a_3 \cdots a_n + a_1 \cdot \ a_2^2 \cdot a_4 \cdots a_n + \cdots + a_2 \cdot a_3 \cdots a_n^2}{a_1 \cdot a_2 \cdots a_n} \ge n
+\end{gather*}
+
+We can start simplifying
+\begin{gather*}
+n \prod_{i=1}^{n} a_i \le a_1^2 \cdot \ a_3 \cdots a_n + a_1 \cdot \ a_2^2 \cdot a_4 \cdots a_n + \cdots + a_2 \cdot a_3 \cdots a_n^2
+\end{gather*}
+
+Now using the AM GM relationship
+\begin{gather*}
+  \prod_{i=1}^{n} a_i \le \dfrac{1}{n} \sum_{i=1}^{n} a_i \le \dfrac{a_1^2 \cdot \ a_3 \cdots a_n + a_1 \cdot \ a_2^2 \cdot a_4 \cdots a_n + \cdots + a_2 \cdot a_3 \cdots a_n^2}{n}
+\end{gather*}
+Thus we can prove this way.
+
+But there is a much more elegant way to solve this.
+
+When we look at the fractions on the left side we observe that if they were all to get multiplied the denominator of the preceding fraction will cancel 
+out the numerator of the next fraction resulting in $\dfrac{a_1}{a_1} = 1$. We can try this exploration of this idea.\\
+
+Let the numbers be $\dfrac{a_1}{a_2}, \dfrac{a_2}{a_3}, \cdots , \dfrac{a_{n - 1}}{a_n}, \dfrac{a_n}{a_1}$. We also know that $a_1, \cdots a_n$ are all positive 
+so these fractions will be defined and positive.
+
+Now using the AM GM inequality for these fractional numbers which are $n$ in number.
+
+\begin{gather*}
+\sqrt[n]{\dfrac{a_1}{a_2} \cdot \dfrac{a_2}{a_3} \cdot \cdots \cdot \dfrac{a_{n - 1}}{a_n} \cdot \dfrac{a_n}{a_1}} \le \dfrac{\left(\dfrac{a_1}{a_2} + \dfrac{a_2}{a_3} + \cdots + \dfrac{a_{n - 1}}{a_n} + \dfrac{a_n}{a_1}\right)}{n}\\\\
+\sqrt[n]{\dfrac{1}{1}} \le \dfrac{\left(\dfrac{a_1}{a_2} + \dfrac{a_2}{a_3} + \cdots + \dfrac{a_{n - 1}}{a_n} + \dfrac{a_n}{a_1}\right)}{n}\\\\
+1 \le \dfrac{\left(\dfrac{a_1}{a_2} + \dfrac{a_2}{a_3} + \cdots + \dfrac{a_{n - 1}}{a_n} + \dfrac{a_n}{a_1}\right)}{n}\\\\
+\dfrac{a_1}{a_2} + \dfrac{a_2}{a_3} + \cdots + \dfrac{a_{n - 1}}{a_n} + \dfrac{a_n}{a_1} \ge n
+\end{gather*}
+
+Hence we can prove this elegantly this way. The observation of taking the product of all these fractions and applying AM GM is the key to this solution.
 \end{problem}
 
 \begin{problem} %327
