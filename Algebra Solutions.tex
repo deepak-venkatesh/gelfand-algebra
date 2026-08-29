@@ -8251,7 +8251,29 @@ Hence proved.
 \end{problem}
 
 \begin{problem} %328
+  At this point we realize that the authors are essentially creating a series of numbers which can be whole, fractional, repetitive etc. 
+
+  In this current problem we can take the numbers in multiple ways, as given below, but all of them lead to a deadlock in the proving the given inequality \\
+  First: $a$ and $b^2$\\
+  Second: $a$, $b$, and $b$ \\
+  Third: $ab$ and $b$
   
+  We some how need a square for $b$ ie $b^2$ in the GM and a single $b$ with no coefficient in the AM as simply $b$. Here we realize that we can do
+  \[
+  b = \dfrac{b}{2} + \dfrac{b}{2}
+  \]
+
+  So the numbers become $a$, $\dfrac{b}{2}$, and another $\dfrac{b}{2}$
+
+  Applying the AM GM inequality for these 3 numbers.
+
+  \begin{gather*}
+    \sqrt[3]{a \cdot \dfrac{b}{2} \cdot \dfrac{b}{2}} \le \dfrac{a + \dfrac{b}{2} + \dfrac{b}{2}}{3}\\\\
+    \sqrt[3]{\dfrac{ab^2}{4}} \le \dfrac{a + b}{3}\\\\
+    a + b \ge 3 \sqrt[3]{\dfrac{1}{4}}
+  \end{gather*}
+
+  Therefore the minimum value of $a + b$ will be $\sqrt[3]{\dfrac{1}{4}}$.
 \end{problem}
 
 \begin{problem} %329
