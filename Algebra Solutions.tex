@@ -8058,15 +8058,142 @@ Hence we are able to show the relationship as required using the previous proble
 We have seen that the equality holds for every even number of terms. And from every even number of terms we can derive the equality for all 
 odd number of terms. Therefore, the AM GM inequality will always hold true for all $n \ge 2$.
 
+The more elegant way would be to prove it through mathematical induction.
 
-  
+Let $P(n)$ denote the statement
+
+\[
+\sqrt[n]{a_1 a_2 \cdots a_n} \le \dfrac{a_1 + a_2 + \cdots + a_n}{n}
+\]
+
+for all positive real numbers $a_1, \cdots ,a_n$
+
+We know that \(P(2)\) is true, since
+
+\[
+\sqrt{ab} \le \dfrac{a + b}{2}
+\]
+
+First, suppose $P(n)$ is true. For $2n$ positive numbers, divide them into two groups of $n$ numbers. By $P(n)$,
+
+\[
+\sqrt[n]{a_1 \cdots a_n} \le \dfrac{a_1 + \cdots + a_n}{n}
+\]
+
+and
+
+\[
+\sqrt[n]{a_{n + 1} \cdots a_{2n}} \le \dfrac{a_{n + 1} + \cdots + a_{2n}}{n}
+\]
+
+Using the two variable AM GM inequality on the two arithmetic means gives
+
+\[
+\sqrt[2n]{a_1 a_2 \cdots a_{2n}} \le \dfrac{a_1 + a_2 + \cdots + a_{2n}}{2n}
+\]
+
+Hence
+
+\[
+P(n)\implies P(2n)
+\]
+
+Next, suppose $P(n)$ is true. Given positive numbers
+$a_1, \cdots ,a_{n-1}$, let
+
+\[
+A = \dfrac{a_1 + \cdots + a_{n - 1}}{n - 1}
+\]
+
+Apply $P(n)$ to the $n$ numbers
+
+\[
+a_1, a_2, \cdots , a_{n - 1}, A
+\]
+
+Then
+
+\[
+\sqrt[n]{a_1 a_2 \cdots a_{n - 1} A} \le \dfrac{a_1 + \cdots + a_{n - 1} + A}{n} = A
+\]
+
+Therefore
+
+\[
+a_1 a_2 \cdots a_{n - 1}A \le A^n
+\]
+
+and since $A>0$,
+
+\[
+a_1 a_2 \cdots a_{n - 1} \le A^{n- 1}
+\]
+
+Thus
+
+\[
+\sqrt[n - 1]{a_1 a_2 \cdots a_{n - 1}} \le A = \dfrac{a_1 + \cdots +a_{n - 1}}{n - 1}
+\]
+
+Hence
+
+\[
+P(n) \implies P(n-1)
+\]
+
+Starting from $P(2)$, repeated doubling proves $P(2^k)$ for every $k \ge 1$. From each $P(2^k)$, repeated backward induction proves all
+cases below it. Therefore $P(n)$ holds for every integer $n \ge2$.  
 \end{problem}
 
 \begin{problem} %324
-  
+The next couple of pages is good reasoning by the authors. Just before problem 325 they actually answer this current problem.
+
+We have proved that for $n = 2$ the product of two numbers is maximum when they are equal in problems 307 and 308. 
+
+Now via proof by contradiction.
+
+Assume for $n$ equal numbers the sum is $S$ and the product is $P$. Now this $P$ is not maximum but is maximum for $a_1 = a_2 = \cdots = a_n$ 
+where some of these numbers are not equal. Now assume two numbers $a_i$ and $a_j$ are not equal. Now we replace these two by their arithmetic 
+mean $\frac{a_i + a_j}{2}$ then the sum does not change but the product now increases. So this product could not have been maximum. 
+
+Therefore, the product $P$ is maximum for a set of numbers only when they are equal.
+
 \end{problem}
 
 \begin{problem} %325
+The argument assumes that among all nonnegative numbers $a_1, \cdots, a_n$ having a fixed sum $S$, there actually exists a
+choice for which the product $a_1a_2\cdots a_n$ attains its maximum. This existence has not yet been proved.
+
+Using calculus, or more precisely the Extreme Value Theorem, the gap can
+be filled as follows.
+
+Consider the set
+
+\begin{gather*}
+D= \{(a_1, \cdots, a_n) \in \mathbb{R}^n : a_i \ge 0,\quad a_1 + \cdots + a_n = S\}
+\end{gather*}
+
+Since $0\leq a_i\leq S$ the set $D$ is bounded. It is also closed, and hence compact.
+
+Now consider the function $f(a_1 , \cdots, a_n) = a_1 a_2 \cdots a_n$. This function is continuous. Therefore, by the Extreme Value Theorem,
+$f$ attains a maximum at some point of $D$. Suppose that at this maximum two numbers, say $a_1$ and $a_2$, are
+unequal. Replace them by
+
+\[
+\dfrac{a_1 + a_2}{2}, \qquad \dfrac{a_1 + a_2}{2}
+\]
+Their sum is unchanged, while
+
+\[
+\left(\dfrac{a_1 + a_2}{2}\right)^2 -a_1 a_2 = \dfrac{(a_1 - a_2)^2}{4} > 0
+\]
+
+Thus the product increases, contradicting the assumption that it was already maximal. Hence no two numbers can be unequal, and therefore
+
+\[
+a_1 = a_2 = \cdots = a_n = \dfrac{S}{n}
+\]
+Thus the product is maximal when all the numbers are equal.
   
 \end{problem}
 
