@@ -8328,7 +8328,64 @@ Thus we have proved
 \end{problem}
 
 \begin{problem} %332
-  
+  The hint given in the book is essentially the solution itself.
+
+  Let us look at the left hand side of the inequality. In this we have 11 terms each equal to
+  \[
+  \left(1 + \dfrac{1}{10}\right)
+  \]
+
+  So we can say that using AM GM relationship that 
+  \[
+  \sqrt[11]{\left(1 + \dfrac{1}{10}\right)^{11}} \le \dfrac{11 \cdot \left(1 + \dfrac{1}{10}\right)}{11}
+  \]
+
+  \begin{gather*}
+    \left(1 + \dfrac{1}{10}\right) \le 1.01\\\\
+    \left(1 + \dfrac{1}{10}\right)^{11} \le 1.01^{11}
+  \end{gather*}
+
+  Ideally we should not be using $\le$ here since we know the equality especially when all the terms are equal. So we have 
+
+  \begin{gather*}
+    \left(1 + \dfrac{1}{10}\right)^{11} = 1.01^{11}
+  \end{gather*}
+
+  Now looking at the right hand side we have 12 terms but to make this comparison we need 11 terms so we can make one term as the 
+  product of two $\left(1 + \dfrac{1}{11}\right)$. 
+
+  Similarly the AM GM relationship turns out to be
+
+  \[
+  \sqrt[11]{\left(1 + \dfrac{1}{11}\right)^{10} \cdot \left(1 + \dfrac{1}{11}\right)^2} \le \dfrac{10 \cdot \left(1 + \dfrac{1}{11}\right) + \left(1 + \dfrac{1}{11}\right)^2}{11}
+  \]
+
+  Simplifying the right side of this numerically 
+
+  \begin{gather*}
+    \implies \dfrac{1}{11} \cdot \left(10 + \dfrac{10}{11} + 1 + \dfrac{2}{11} + \dfrac{1}{11^2}\right)\\\\
+    \implies 1 + \dfrac{12}{11^2} + \dfrac{1}{11^3}
+    \implies 1.099925
+  \end{gather*}
+
+  So the inequality becomes 
+
+  \begin{gather*}
+    \left(1 + \dfrac{1}{11}\right)^{10} \cdot \left(1 + \dfrac{1}{11}\right)^2 \le 1.099925^{11}\\\\
+    \left(1 + \dfrac{1}{11}\right)^{12} \le 1.099925^{11}
+  \end{gather*}
+
+  So the maximum value is 
+   \begin{gather*}
+    \left(1 + \dfrac{1}{11}\right)^{12} = 1.099925^{11}
+  \end{gather*}
+
+  We have shown that 
+
+  \[
+  \left(1 + \dfrac{1}{10}\right)^{11} > \left(1 + \dfrac{1}{11}\right)^{12}
+  \]
+
 \end{problem}
 
 \begin{problem} %333
