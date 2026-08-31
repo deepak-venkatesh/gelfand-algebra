@@ -8389,7 +8389,54 @@ Thus we have proved
 \end{problem}
 
 \begin{problem} %333
-  
+  Let us try and compare similar numbers but first we know
+
+\[
+\left(1 + \dfrac{1}{10}\right)^{10} < \left(1 + \dfrac{1}{11}\right)^{11}
+\]
+
+and,
+
+\[
+\left(1 + \dfrac{1}{10}\right)^{11} > \left(1 + \dfrac{1}{11}\right)^{12}
+\]
+
+We know that the following since the $12^{th}$ power of a number greater than 1 will be greater than its $11^{th}$ power.
+
+So this will be true 
+
+\[
+\left(1 + \dfrac{1}{11}\right)^{12} > \left(1 + \dfrac{1}{11}\right)^{11}
+\]
+
+Now simply merging the two inequalities from the previous two problems given this fact, we have
+
+\[
+\left(1 + \dfrac{1}{10}\right)^{10} < \left(1 + \dfrac{1}{11}\right)^{11} < \left(1 + \dfrac{1}{11}\right)^{12} < \left(1 + \dfrac{1}{10}\right)^{11}
+\]
+
+Let us verify this in Scheme.
+
+\begin{lstlisting}
+#lang sicp
+
+(define compute
+  (lambda (denom power)
+    (cond ((= power 0 ) 1)
+          (else (* (compute denom (- power 1))
+                   (+ 1 (/ 1 denom)))))))
+
+(let ((a (compute 10 11))
+      (b (compute 11 12))
+      (c (compute 11 11))
+      (d (compute 10 10)))
+  (> a b c d))
+\end{lstlisting}
+
+We get the answer from the Scheme interpreter as \textbf{\#t}
+
+
+
 \end{problem}
 %%%%%%%%%% 71
 \section{The quadratic mean}
