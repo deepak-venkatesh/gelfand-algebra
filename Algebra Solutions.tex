@@ -8434,9 +8434,6 @@ Let us verify this in Scheme.
 \end{lstlisting}
 
 We get the answer from the Scheme interpreter as \textbf{\#t}
-
-
-
 \end{problem}
 %%%%%%%%%% 71
 \section{The quadratic mean}
@@ -8731,8 +8728,147 @@ Therefore the minimum value is $\dfrac{4}{3}$.
 \end{problem}
 
 \begin{problem} %342
-  
+The  inequality may be rewritten as
+
+\[
+\dfrac{a_1 + \cdots + a_n}{n} \ge \dfrac{1}{\left(\dfrac{1}{a_1} + \cdots + \dfrac{1}{a_n}\right)/n}
+\]
+
+
+Thus, we have to prove that the arithmetic mean of $n$ positive numbers is greater than or equal to their harmonic mean.
+
+By the AM GM inequality,
+\[
+\dfrac{a_1 + \cdots + a_n}{n} \ge \sqrt[n]{a_1 a_2\cdots a_n}
+\]
+
+We get
+
+\[
+\sqrt[n]{a_1 a_2\cdots a_n} = \dfrac{1}{\sqrt[n]{\dfrac{1}{a_1} \dfrac{1}{a_2} \cdots \dfrac{1}{a_n}}}
+\]
+
+Applying the AM GM inequality to the numbers
+
+\[
+\dfrac{1}{a_1}, \dfrac{1}{a_2}, \cdots, \dfrac{1}{a_n}
+\]
+
+we have
+
+\[
+\dfrac{ \dfrac{1}{a_1} + \cdots + \dfrac{1}{a_n}}{n} \ge \sqrt[n]{\dfrac{1}{a_1} \dfrac{1}{a_2} \cdots \dfrac{1}{a_n}}
+\]
+
+
+All quantities are positive, rearranging the inequality.
+
+\[
+\dfrac{1}{\sqrt[n]{\dfrac{1}{a_1} \dfrac{1}{a_2} \cdots \dfrac{1}{a_n}}} \ge \dfrac{1}{\left(\dfrac{1}{a_1}+ \cdots + \dfrac{1}{a_n}\right)/n}
+\]
+
+
+Therefore,
+
+\[
+\dfrac{a_1 + \cdots + a_n}{n} \ge \sqrt[n]{a_1 a_2 \cdots a_n} \ge \dfrac{1}{\left(\dfrac{1}{a_1}+ \cdots + \dfrac{1}{a_n}\right)/n}
+\]
+
+
+Hence,
+
+\[
+(a_1 + \cdots +a_n) \left(\dfrac{1}{a_1} + \cdots + \dfrac{1}{a_n}\right) \ge n^2
+\]
+
+This was an easy proof of the given inequality.
+
+Another Solution given is the  Cauchy-Schwarz inequality.
+
+The Cauchy-Schwarz inequality states that
+
+\[
+(p_1q_1 + \cdots + p_nq_n)^2 \le (p_1^2 + \cdots + p_n^2) (q_1^2 + \cdots + q_n^2)
+\]
+
+
+The authors choose
+
+\[
+p_i = \sqrt{a_i}, \qquad q_i = \dfrac{1}{\sqrt{a_i}}
+\]
+
+
+Then $p_i q_i = 1$ and therefore
+
+\[
+(p_1 q_1 + \cdots + p_n q_n)^2 = n^2
+\]
+
+
+Also,
+
+\[
+p_1^2 + \cdots + p_n^2 = a_1 + \cdots + a_n
+\]
+
+and
+
+\[
+q_1^2+ \cdots + q_n^2 = \dfrac{1}{a_1} + \cdots + \dfrac{1}{a_n}
+\]
+
+Hence Cauchy-Schwarz gives
+
+\[
+n^2 \le (a_1 + \cdots + a_n) \left(\dfrac{1}{a_1} + \cdots + \dfrac{1}{a_n}\right)
+\]
+
+
+which is precisely the desired inequality.
+
+
+Proof of the Cauchy-Schwarz Inequality
+
+Consider
+
+\[
+(p_1 + q_1x)^2 + (p_2 + q_2x)^2 + \cdots + (p_n + q_nx)^2
+\]
+
+Since this is a sum of squares, it is nonnegative for every real $x$. Expanding and collecting terms gives a quadratic polynomial $Ax^2 + Bx + C$ where
+
+\[
+A = q_1^2 + q_2^2 + \cdots + q_n^2
+\]
+
+\[
+B = 2(p_1 q_1 + p_2 q_2 + \cdots +p_n q_n)
+\]
+
+\[
+C = p_1^2 + p_2^2 + \cdots + p_n^2
+\]
+
+
+Since $Ax^2 + Bx + C\ge 0$ for every real $x$, its discriminant cannot be positive. Thus, $B^2 - 4AC \le 0$
+
+Therefore, $B^2 \le 4AC$ so
+
+\[
+\left(\dfrac{B}{2}\right)^2 \le AC
+\]
+
+
+Substituting the expressions for $A$, $B$, and $C$, we obtain
+
+\[
+(p_1 q_1 + \cdots +p_n q_n)^2 \le (p_1^2 + \cdots + p_n^2) (q_1^2 + \cdots + q_n^2)
+\]
+
+This is the Cauchy-Schwarz inequality.
 \end{problem}
+
 
 
 \end{document}
